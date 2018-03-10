@@ -244,7 +244,7 @@ class AsyncJavaScriptBackend {
      *  @return     n/a
      */
     public function async_javascript_admin() {
-    	$tabs = array( 'wizard', 'settings','status', 'help', 'more speed?' );
+    	$tabs = array( 'wizard', 'settings','status', 'help', 'Optimize More!' );
 		$active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_text_field( $_GET[ 'tab' ] ) : 'settings';
         ?>
         <div class="wrap aj">
@@ -268,7 +268,7 @@ class AsyncJavaScriptBackend {
                 require_once('asyncjsSettingsScreens.php');
             } else if ( $active_tab == 'help' ) {
                 require('asyncjsHelpScreens.php');
-            } else if ( $active_tab == 'more speed?' ) {
+            } else if ( $active_tab == 'Optimize More!' ) {
                 require('asyncjsPartnersScreens.php');
             }
         ?>
