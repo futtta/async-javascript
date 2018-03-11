@@ -34,17 +34,17 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
     <tr id="aj_step1">
         <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/number_one_break_hole_150_clr_18741.gif" title="Step 1" alt="GTmetrix API Key" class="aj_step_img"></td>
         <td scope="row" align="left" style="vertical-align: top !important;">
-            <h3>Step 1: GTmetrix API Key</h3>
-            <p><strong><em>Please Note:</em></strong> You do not have to use this Wizard.  All settings can be changed under the <a href="<?php echo menu_page_url( AJ_ADMIN_MENU_SLUG, false ) . '&tab=settings'; ?>">Settings</a> tab.</p>
+            <h3><?php _e('Step 1: GTmetrix API Key','asyncjs'); ?></h3>
+            <p><?php _e('<strong><em>Please Note:</em></strong> You do not have to use this Wizard. All settings can be changed under the','asyncjs'); ?> <a href="<?php echo menu_page_url( AJ_ADMIN_MENU_SLUG, false ) . '&tab=settings'; ?>"><?php _e('Settings','asyncjs'); ?></a> <?php _e('tab.','asyncjs'); ?></p>
             <hr />
-            <p>If you haven't already done so, grab an API Key from GTmetrix so that <?php echo AJ_TITLE; ?> can obtain your PageSpeed / YSlow results.  Here's how:</p>
+            <p><?php _e("If you haven't already done so, grab an API Key from GTmetrix so that Async JavaScript can obtain your PageSpeed / YSlow results.  Here's how:",'asyncjs'); ?></p>
             <ol>
-                <li>Navigate to <a href="https://gtmetrix.com/api/" target="_blank">https://gtmetrix.com/api/</a> (link opens in a new tab)</li>
-                <li>If you do not already have an account with GTmetrix, go ahead and sign up (it's FREE!).</li>
-                <li>Log in to your GTmetrix account.</li>
-                <li>If you haven't yet generated your API Key, click on <strong>Generate API Key</strong></li>
-                <li>Copy your Username and API Key into the fields below:<br /><input type="text" id="aj_gtmetrix_username" value="<?php echo $aj_gtmetrix_username; ?>" placeholder="GTmetrix Username"><input type="text" id="aj_gtmetrix_api_key" value="<?php echo $aj_gtmetrix_api_key; ?>" placeholder="GTmetrix API Key"></li>
-                <li>Select the desired server.<br />
+                <li><?php _e('Navigate to ','asyncjs'); ?><a href="https://gtmetrix.com/api/" target="_blank">https://gtmetrix.com/api/</a> <?php _e('(link opens in a new tab)','asyncjs'); ?></li>
+                <li><?php _e("If you do not already have an account with GTmetrix, go ahead and sign up (it's FREE!).",'asyncjs'); ?></li>
+                <li><?php _e('Log in to your GTmetrix account.','asyncjs'); ?></li>
+                <li><?php _e("If you haven't yet generated your API Key, click on <strong>Generate API Key</strong>",'asyncjs'); ?></li>
+                <li><?php _e('Copy your Username and API Key into the fields below:','asyncjs'); ?><br /><input type="text" id="aj_gtmetrix_username" value="<?php echo $aj_gtmetrix_username; ?>" placeholder="GTmetrix Username"><input type="text" id="aj_gtmetrix_api_key" value="<?php echo $aj_gtmetrix_api_key; ?>" placeholder="GTmetrix API Key"></li>
+                <li><?php _e('Select the desired server.','asyncjs'); ?><br />
                     <select id="aj_gtmetrix_server">
                         <?php
                         $gtmetrix_locations = array(
@@ -61,44 +61,44 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
                         ?>
                     </select>
                 </li>
-                <li>GTmetrix Credits Available: <span class="aj_gtmetrix_credits"><?php echo $credits; ?></span></li>
+                <li><?php _e('GTmetrix Credits Available: ','asyncjs'); ?><span class="aj_gtmetrix_credits"><?php echo $credits; ?></span></li>
             </ol>
-            <p><strong>Please Note:</strong> By clicking the button below you acknowledge that you understand that five (5) GTmetrix API credits will be used.</p>
-            <p><button data-id="aj_step2" class="aj_steps_button">Proceed to Step 2</button></p>
+            <p><?php _e('<strong>Please Note:</strong> By clicking the button below you acknowledge that you understand that five (5) GTmetrix API credits will be used.','asyncjs'); ?></p>
+            <p><button data-id="aj_step2" class="aj_steps_button"><?php _e('Proceed to Step 2','asyncjs'); ?></button></p>
         </td>
     </tr>
     <tr id="aj_step2" class="aj_steps_hidden">
         <td scope="row" align="center"><img src="<?php echo AJ_PLUGIN_URL; ?>images/number_two_break_hole_150_clr_18753.gif" title="Step 2" alt="Initial Test Results" class="aj_step_img"></td>
         <td scope="row" align="left">
-            <h3>Step 2: Initial Test Results</h3>
-            <p><?php echo AJ_TITLE; ?> will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores.</p>
-            <p id="aj_step2_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="Please Wait" alt="Please Wait" class="aj_step_img"></p>
+            <h3><?php _e('Step 2: Initial Test Results','asyncjs'); ?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e('will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores.','asyncjs'); ?></p>
+            <p id="aj_step2_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs');?>" alt="<?php _e('Please Wait','asyncjs');?>" class="aj_step_img"></p>
             <table id="aj_step2_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2_screenshot aj_gtmetrix_screenshot">
                     <td scope="row" align="center">
-                        <h3>PageSpeed Score</h3>
+                        <h3><?php _e('PageSpeed Score','asyncjs'); ?></h3>
                         <span class="aj_step2_pagespeed aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>YSlow Score</h3>
+                        <h3><?php _e('YSlow Score','asyncjs'); ?></h3>
                         <span class="aj_step2_yslow aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Fully Loaded Time</h3>
+                        <h3><?php _e('Fully Loaded Time','asyncjs'); ?></h3>
                         <span class="aj_step2_flt aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Total Page Size</h3>
+                        <h3><?php _e('Total Page Size','asyncjs'); ?></h3>
                         <span class="aj_step2_tps aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Requests</h3>
+                        <h3><?php _e('Requests','asyncjs'); ?></h3>
                         <span class="aj_step2_requests aj_gtmetrix_result"></span>
                     </td>
                 </tr>
-                <tr><td scope="row" align="left" colspan="6">See full report: <span class="aj_step2_report"></span></td></tr>
-                <tr><td scope="row" align="left" colspan="6">Simulate <span class="aj_step2_gtmetrix"></span>: <a href="" class="aj_step2_url" target="_blank"></a></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:','asyncjs'); ?> <span class="aj_step2_report"></span></td></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate','asyncjs'); ?> <span class="aj_step2_gtmetrix"></span>: <a href="" class="aj_step2_url" target="_blank"></a></tr>
                 <p></p>
             </table>
         </td>
@@ -106,203 +106,203 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
     <tr id="aj_step2b" class="aj_steps_hidden">
         <td scope="row" align="center"></td>
         <td scope="row" align="left">
-            <h3>Testing: Async</h3>
-            <p><?php echo AJ_TITLE; ?> will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method.</p>
-            <p id="aj_step2b_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="Please Wait" alt="Please Wait" class="aj_step_img"></p>
+            <h3><?php _e('Testing: Async','asyncjs');?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method.",'asyncjs'); ?></p>
+            <p id="aj_step2b_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs');?>" alt="<?php _e('Please Wait','asyncjs');?>" class="aj_step_img"></p>
             <table id="aj_step2b_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2b_screenshot aj_gtmetrix_screenshot">
                     <td scope="row" align="center">
-                        <h3>PageSpeed Score</h3>
+                        <h3><?php _e('PageSpeed Score','asyncjs');?></h3>
                         <span class="aj_step2b_pagespeed aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>YSlow Score</h3>
+                        <h3><?php _e('YSlow Score','asyncjs');?></h3>
                         <span class="aj_step2b_yslow aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Fully Loaded Time</h3>
+                        <h3><?php _e('Fully Loaded Time','asyncjs');?></h3>
                         <span class="aj_step2b_flt aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Total Page Size</h3>
+                        <h3><?php _e('Total Page Size','asyncjs');?></h3>
                         <span class="aj_step2b_tps aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Requests</h3>
+                        <h3><?php _e('Requests','asyncjs');?></h3>
                         <span class="aj_step2b_requests aj_gtmetrix_result"></span>
                     </td>
                 </tr>
-                <tr><td scope="row" align="left" colspan="6">See full report: <span class="aj_step2b_report"></span></td></tr>
-                <tr><td scope="row" align="left" colspan="6">Simulate <span class="aj_step2b_gtmetrix"></span>: <a href="" class="aj_step2b_url" target="_blank"></a></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:','asyncjs');?> <span class="aj_step2b_report"></span></td></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate','asyncjs');?> <span class="aj_step2b_gtmetrix"></span>: <a href="" class="aj_step2b_url" target="_blank"></a></tr>
             </table>
         </td>
     </tr>
     <tr id="aj_step2c" class="aj_steps_hidden">
         <td scope="row" align="center"></td>
         <td scope="row" align="left">
-            <h3>Testing: Defer</h3>
-            <p><?php echo AJ_TITLE; ?> will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method.</p>
-            <p id="aj_step2c_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="Please Wait" alt="Please Wait" class="aj_step_img"></p>
+            <h3><?php _e('Testing: Defer','asyncjs');?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method.",'asyncjs');?></p>
+            <p id="aj_step2c_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs');?>" alt="<?php _e('Please Wait','asyncjs');?>" class="aj_step_img"></p>
             <table id="aj_step2c_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2c_screenshot aj_gtmetrix_screenshot">
                     <td scope="row" align="center">
-                        <h3>PageSpeed Score</h3>
+                        <h3><?php _e('PageSpeed Score','asyncjs');?></h3>
                         <span class="aj_step2c_pagespeed aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>YSlow Score</h3>
+                        <h3><?php _e('YSlow Score','asyncjs');?></h3>
                         <span class="aj_step2c_yslow aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Fully Loaded Time</h3>
+                        <h3><?php _e('Fully Loaded Time','asyncjs');?></h3>
                         <span class="aj_step2c_flt aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Total Page Size</h3>
+                        <h3><?php _e('Total Page Size','asyncjs');?></h3>
                         <span class="aj_step2c_tps aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Requests</h3>
+                        <h3><?php _e('Requests','asyncjs');?></h3>
                         <span class="aj_step2c_requests aj_gtmetrix_result"></span>
                     </td>
                 </tr>
-                <tr><td scope="row" align="left" colspan="6">See full report: <span class="aj_step2c_report"></span></td></tr>
-                <tr><td scope="row" align="left" colspan="6">Simulate <span class="aj_step2c_gtmetrix"></span>: <a href="" class="aj_step2c_url" target="_blank"></a></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:','asyncjs');?> <span class="aj_step2c_report"></span></td></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate','asyncjs');?> <span class="aj_step2c_gtmetrix"></span>: <a href="" class="aj_step2c_url" target="_blank"></a></tr>
             </table>
         </td>
     </tr>
     <tr id="aj_step2d" class="aj_steps_hidden">
         <td scope="row" align="center"></td>
         <td scope="row" align="left">
-            <h3>Testing: Async (jQuery excluded)</h3>
-            <p><?php echo AJ_TITLE; ?> will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method but excluding jQuery.</p>
-            <p id="aj_step2d_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="Please Wait" alt="Please Wait" class="aj_step_img"></p>
+            <h3><?php _e('Testing: Async (jQuery excluded)','asyncjs');?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method but excluding jQuery.",'asyncjs');?></p>
+            <p id="aj_step2d_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs');?>" alt="<?php _e('Please Wait','asyncjs');?>" class="aj_step_img"></p>
             <table id="aj_step2d_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2d_screenshot aj_gtmetrix_screenshot">
                     <td scope="row" align="center">
-                        <h3>PageSpeed Score</h3>
+                        <h3><?php _e('PageSpeed Score','asyncjs');?></h3>
                         <span class="aj_step2d_pagespeed aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>YSlow Score</h3>
+                        <h3><?php _e('YSlow Score','asyncjs');?></h3>
                         <span class="aj_step2d_yslow aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Fully Loaded Time</h3>
+                        <h3><?php _e('Fully Loaded Time','asyncjs');?></h3>
                         <span class="aj_step2d_flt aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Total Page Size</h3>
+                        <h3><?php _e('Total Page Size','asyncjs');?></h3>
                         <span class="aj_step2d_tps aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Requests</h3>
+                        <h3><?php _e('Requests','asyncjs');?></h3>
                         <span class="aj_step2d_requests aj_gtmetrix_result"></span>
                     </td>
                 </tr>
-                <tr><td scope="row" align="left" colspan="6">See full report: <span class="aj_step2d_report"></span></td></tr>
-                <tr><td scope="row" align="left" colspan="6">Simulate <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:','asyncjs');?> <span class="aj_step2d_report"></span></td></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate','asyncjs');?> <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></tr>
             </table>
         </td>
     </tr>
     <tr id="aj_step2e" class="aj_steps_hidden">
         <td scope="row" align="center"></td>
         <td scope="row" align="left">
-            <h3>Testing: Defer (jQuery excluded)</h3>
-            <p><?php echo AJ_TITLE; ?> will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method but excluding jQuery.</p>
-            <p id="aj_step2e_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="Please Wait" alt="Please Wait" class="aj_step_img"></p>
+            <h3><?php _e('Testing: Defer (jQuery excluded)','asyncjs');?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method but excluding jQuery.",'asyncjs');?></p>
+            <p id="aj_step2e_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs');?>" alt="<?php _e('Please Wait','asyncjs');?>" class="aj_step_img"></p>
             <table id="aj_step2e_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2e_screenshot aj_gtmetrix_screenshot">
                     <td scope="row" align="center">
-                        <h3>PageSpeed Score</h3>
+                        <h3><?php _e('PageSpeed Score','asyncjs');?></h3>
                         <span class="aj_step2e_pagespeed aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>YSlow Score</h3>
+                        <h3><?php _e('YSlow Score','asyncjs');?></h3>
                         <span class="aj_step2e_yslow aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Fully Loaded Time</h3>
+                        <h3><?php _e('Fully Loaded Time','asyncjs');?></h3>
                         <span class="aj_step2e_flt aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Total Page Size</h3>
+                        <h3><?php _e('Total Page Size','asyncjs');?></h3>
                         <span class="aj_step2e_tps aj_gtmetrix_result"></span>
                     </td>
                     <td scope="row" align="center">
-                        <h3>Requests</h3>
+                        <h3><?php _e('Requests','asyncjs');?></h3>
                         <span class="aj_step2e_requests aj_gtmetrix_result"></span>
                     </td>
                 </tr>
-                <tr><td scope="row" align="left" colspan="6">See full report: <span class="aj_step2e_report"></span></td></tr>
-                <tr><td scope="row" align="left" colspan="6">Simulate <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:','asyncjs');?> <span class="aj_step2e_report"></span></td></tr>
+                <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate','asyncjs');?> <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></tr>
             </table>
         </td>
     </tr>
     <tr id="aj_step_results" class="aj_steps_hidden">
         <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/number_three_break_hole_150_clr_18837.gif" title="Results &amp; Recommendations" alt="Results &amp; Recommendations"  class="aj_step_img"></td>
         <td scope="row" align="left">
-            <h3>Step 3: Results &amp; Recommendations</h3>
-            <p><?php echo AJ_TITLE; ?> has finished testing your site with the most common configuration options.</p>
-            <p>Based on the tests <?php echo AJ_TITLE; ?> has determined that <span class="aj_gtmetrix_config"></span> has resulted in <span id="aj_gtmetrix_inde_pagespeed"></span> in PageSpeed from <span id="aj_gtmetrix_baseline_pagespeed"></span> to <span id="aj_gtmetrix_best_pagespeed"></span> and <span id="aj_gtmetrix_inde_yslow"></span> in YSlow from <span id="aj_gtmetrix_baseline_yslow"></span> to <span id="aj_gtmetrix_best_yslow"></span>, with a Fully Loaded time of <span id="aj_gtmetrix_best_fullyloaded"></span>.</p>
-            <p>Before applying these settings it is important to check your site is still functioning correctly.  Click the link below to open your site in a new tab / window to simulate the <?php echo AJ_TITLE; ?> settings and check that everything is working, and also be sure to check the console for any JavaScript errors (see <a href="https://codex.wordpress.org/Using_Your_Browser_to_Diagnose_JavaScript_Errors" target="_blank">Using Your Browser to Diagnose JavaScript Errors</a>)</p>
+            <h3><?php _e('Step 3: Results &amp; Recommendations','asyncjs');?></h3>
+            <p><?php echo AJ_TITLE; ?> <?php _e('has finished testing your site with the most common configuration options.','asyncjs');?></p>
+            <p><?php _e('Based on the tests Async JavaScript has determined that <span class="aj_gtmetrix_config"></span> has resuled in <span id="aj_gtmetrix_inde_pagespeed"></span> in PageSpeed from <span id="aj_gtmetrix_baseline_pagespeed"></span> to <span id="aj_gtmetrix_best_pagespeed"></span> and <span id="aj_gtmetrix_inde_yslow"></span> in YSlow from <span id="aj_gtmetrix_baseline_yslow"></span> to <span id="aj_gtmetrix_best_yslow"></span>, with a Fully Loaded time of','asyncjs');?> <span id="aj_gtmetrix_best_fullyloaded"></span>.</p>
+            <p><?php _e('Before applying these settings it is important to check your site is still functioning correctly.  Click the link below to open your site in a new tab / window to simulate the <?php echo AJ_TITLE; ?> settings and check that everything is working, and also be sure to check the console for any JavaScript errors (see <a href="https://codex.wordpress.org/Using_Your_Browser_to_Diagnose_JavaScript_Errors" target="_blank">Using Your Browser to Diagnose JavaScript Errors</a>)','asyncjs');?></p>
             <ul>
-                <li>Simulate <span class="aj_gtmetrix_config"></span>: <a href="" id="aj_gtmetrix_best_url" target="_blank"></a></li>
+                <li><?php _e('Simulate','asyncjs');?> <span class="aj_gtmetrix_config"></span>: <a href="" id="aj_gtmetrix_best_url" target="_blank"></a></li>
             </ul>
-            <p>Once you have simulated <span class="aj_gtmetrix_config"></span> click on the button below to continue.</p>
-            <p><button data-id="aj_step4" class="aj_steps_button">Proceed to Step 4</button></p>
+            <p><?php _e('Once you have simulated','asyncjs');?> <span class="aj_gtmetrix_config"></span> <?php _e('click on the button below to continue.','asyncjs');?></p>
+            <p><button data-id="aj_step4" class="aj_steps_button"><?php _e('Proceed to Step 4','asyncjs');?></button></p>
         </td>
     </tr>
     <tr id="aj_step4" class="aj_steps_hidden">
         <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/number_four_break_hole_150_clr_18840.gif" title="Apply Settings" alt="Apply Settings"  class="aj_step_img"></td>
         <td scope="row" align="left">
-            <h3>Step 4: Apply Settings</h3>
-            <p>Is your site still functioning properly and are there no JavaScript errors in the console?</p>
-            <p><input type="radio" name="aj_step4_check" value="y"> Yes <input type="radio" name="aj_step4_check" value="n"> No</p>
+            <h3><?php _e('Step 4: Apply Settings','asyncjs');?></h3>
+            <p><?php _e('Is your site still functioning properly and are there no JavaScript errors in the console?','asyncjs');?></p>
+            <p><input type="radio" name="aj_step4_check" value="y"> <?php _e('Yes','asyncjs');?> <input type="radio" name="aj_step4_check" value="n"> <?php _e('No','asyncjs');?></p>
             <div id="aj_step4_y">
-                <p>Great to hear! To apply these settings click the button below.</p>
-                <p><button data-id="aj_apply_settings" class="aj_steps_button">Apply Settings</button></p>
+                <p><?php _e('Great to hear! To apply these settings click the button below.','asyncjs');?></p>
+                <p><button data-id="aj_apply_settings" class="aj_steps_button"><?php _e('Apply Settings','asyncjs');?></button></p>
             </div>
             <div id="aj_step4_n">
-                <p>Ok, so you have run the simulation on <span class="aj_gtmetrix_config"></span> and although there has been an improvement in reported performance, the simulation shows that something is not right with your site.</p>
+                <p><?php _e('Ok, so you have run the simulation on <span class="aj_gtmetrix_config"></span> and although there has been an improvement in reported performance, the simulation shows that something is not right with your site.','asyncjs');?></p>
                 <div id="aj_step4_jquery_excluded">
-                    <p>In most cases the issue being experienced relates to jQuery (usually due to inline JavaScript which relies on jQuery) and the solution is to exclude jQuery.  However, in this simulation jQuery has already been exculded.  As a result a different configuration may work better with a marginal sacrifice in site speed improvement.</p>
-                    <p>Below are links that can be used to run simulations on each of the basic configurations.  Click on each of the links and check the functionality of your site as well as the console for errors.</p>
+                    <p><?php _e('In most cases the issue being experienced relates to jQuery (usually due to inline JavaScript which relies on jQuery) and the solution is to exclude jQuery.  However, in this simulation jQuery has already been exculded.  As a result a different configuration may work better with a marginal sacrifice in site speed improvement.','asyncjs');?></p>
+                    <p><?php _e('Below are links that can be used to run simulations on each of the basic configurations.  Click on each of the links and check the functionality of your site as well as the console for errors.','asyncjs');?></p>
                     <ul>
-                        <li>Simulate <span class="aj_step2b_gtmetrix"></span>: <a href="" class="aj_step2b_url" target="_blank"></a></li>
-                        <li>Simulate <span class="aj_step2c_gtmetrix"></span>: <a href="" class="aj_step2c_url" target="_blank"></a></li>
-                        <li>Simulate <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></li>
-                        <li>Simulate <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2b_gtmetrix"></span>: <a href="" class="aj_step2b_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2c_gtmetrix"></span>: <a href="" class="aj_step2c_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></li>
                     </ul>
-                    <p>Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.</p>
+                    <p><?php _e('Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.','asyncjs');?></p>
                     <p>
-                        <button data-id="aj_step2b_apply" class="aj_steps_button">Apply <span class="aj_step2b_gtmetrix"></button>
-                        <button data-id="aj_step2c_apply" class="aj_steps_button">Apply <span class="aj_step2c_gtmetrix"></button>
-                        <button data-id="aj_step2d_apply" class="aj_steps_button">Apply <span class="aj_step2d_gtmetrix"></button>
-                        <button data-id="aj_step2e_apply" class="aj_steps_button">Apply <span class="aj_step2e_gtmetrix"></button>
+                        <button data-id="aj_step2b_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2b_gtmetrix"></button>
+                        <button data-id="aj_step2c_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2c_gtmetrix"></button>
+                        <button data-id="aj_step2d_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
+                        <button data-id="aj_step2e_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
                     </p>
                     <p>
-                        <button data-id="aj_goto_settings" class="aj_steps_button">Settings</button>
+                        <button data-id="aj_goto_settings" class="aj_steps_button"><?php _e('Settings','asyncjs');?></button>
                     </p>
                 </div>
                 <div id="aj_step4_jquery_not_excluded">
-                    <p>In most cases the issue being experienced relates to jQuery (usually due to inline JavaScript which relies on jQuery) and the solution is to exclude jQuery.</p>
-                    <p>Below are links that can be used to run simulations on each of the configurations with jQuery excluded.  Click on each of the links and check the functionality of your site as well as the console for errors.</p>
+                    <p><?php _e('In most cases the issue being experienced relates to jQuery (usually due to inline JavaScript which relies on jQuery) and the solution is to exclude jQuery.','asyncjs');?></p>
+                    <p><?php _e('Below are links that can be used to run simulations on each of the configurations with jQuery excluded.  Click on each of the links and check the functionality of your site as well as the console for errors.','asyncjs');?></p>
                     <ul>
-                        <li>Simulate <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></li>
-                        <li>Simulate <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2d_gtmetrix"></span>: <a href="" class="aj_step2d_url" target="_blank"></a></li>
+                        <li><?php _e('Simulate','asyncjs');?> <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></li>
                     </ul>
-                    <p>Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.</p>
+                    <p><?php _e('Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.','asyncjs');?></p>
                     <p>
-                        <button data-id="aj_step2d_apply" class="aj_steps_button">Apply <span class="aj_step2d_gtmetrix"></button>
-                        <button data-id="aj_step2e_apply" class="aj_steps_button">Apply <span class="aj_step2e_gtmetrix"></button>
+                        <button data-id="aj_step2d_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
+                        <button data-id="aj_step2e_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
                     </p>
                     <p>
-                        <button data-id="aj_goto_settings" class="aj_steps_button">Settings</button>
+                        <button data-id="aj_goto_settings" class="aj_steps_button"><?php _e('Settings','asyncjs');?></button>
                     </p>
                 </div>
             </div>
