@@ -211,7 +211,7 @@ class AsyncJavaScriptBackend {
     public function aj_admin_notice() {
         if ( is_plugin_active( 'async-javascript-pro/async-javascript-pro.php' ) ) {
             $class = 'update-nag';
-            $message = 'We have detected that Async JavaScript Pro is still active. Please disable from the plugin menu before using ' . AJ_TITLE;
+            $message = __('We have detected that Async JavaScript Pro is still active. Please disable from the plugin menu before using ','asyncjs') . AJ_TITLE;
             echo "<div class=\"$class\">$message</div>";
         }
     }
@@ -284,16 +284,17 @@ class AsyncJavaScriptBackend {
 	 */
 	private function about_aj() {
 		$return = '';
-		$return .= '<p>When a JavaScript file is loaded via the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function, ' . AJ_TITLE . ' will add an <strong>async</strong> or <strong>defer</strong> attribute.</p>';
-		$return .= '<p>There are several ways an external JavaScript file can be executed:</p>';
+		$return .= '<p>'.__('When a JavaScript file is loaded via the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function, ' . AJ_TITLE . ' will add an <strong>async</strong> or <strong>defer</strong> attribute.','asyncjs').'</p>';
+		$return .= '<p>'.__('There are several ways an external JavaScript file can be executed:','asyncjs').'</p>';
 		$return .= '<ul style="list-style:disc inside;">';
-			$return .= '<li>If <strong>async</strong> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</li>';
-			$return .= '<li>If <strong>defer</strong> is present and <strong>async</strong> is not present: The script is executed when the page has finished parsing</li>';
-			$return .= '<li>If neither <strong>async</strong> or <strong>defer</strong> is present: The script is fetched and executed immediately, before the browser continues parsing the page</li>';
+        $return .= '<li>'.__('If <strong>async</strong> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</li>','asyncjs');
+        $return .= '<li>'.__('If <strong>defer</strong> is present and <strong>async</strong> is not present: The script is executed when the page has finished parsing</li>','asyncjs');
+        $return .= '<li>'.__('If neither <strong>async</strong> or <strong>defer</strong> is present: The script is fetched and executed immediately, before the browser continues parsing the page</li>','asyncjs');
 		$return .= '</ul>';
-		$return .= '<p>Using <strong>async</strong> or <strong>defer</strong> helps to eliminate render-blocking JavaScript in above-the-fold content.  This can also help to increase your pagespeed which in turn can assist in improving your page ranking.</p>';
+		$return .= '<p>'.__('Using <strong>async</strong> or <strong>defer</strong> helps to eliminate render-blocking JavaScript in above-the-fold content.  This can also help to increase your pagespeed which in turn can assist in improving your page ranking.</p>','asyncjs');
 		return $return;
 	}
+    
 	/**
 	 *  hints_tips()
 	 *
@@ -302,35 +303,35 @@ class AsyncJavaScriptBackend {
 	 */
 	private function hints_tips() {
 		$return = '';
-		$return .= '<h3>Further Hints &amp; Tips</h3>';
+		$return .= '<h3>'.__('Further Hints &amp; Tips','asyncjs').'</h3>';
 		if ( is_plugin_active( 'autoptimize/autoptimize.php' ) ) {
-			$return .= '<p>' . AJ_TITLE . ' has detected that you have Autoptimize installed and active.  ' . AJ_TITLE . ' can further enhance Autoptimize results by applying Async or Defer to the cache files used by Autoptimize.</p>';
+			$return .= '<p>' . AJ_TITLE . __(' has detected that you have Autoptimize installed and active. ','asyncjs') . AJ_TITLE . __(' can further enhance Autoptimize results by applying Async or Defer to the cache files used by Autoptimize.</p>','asyncjs');
 		} else {
-			$return .= '<p>' . AJ_TITLE . ' has detected that you do not have Autoptimize installed and active.  Autoptimize can provide further optimization of JavaScript which can benefit the results of ' . AJ_TITLE . ' (and ' . AJ_TITLE . ' can also enhance Autoptimize results!)</p>';
-			$return .= '<p>You can install Autoptimize from the plugin repository, or download it from here: <a href="https://wordpress.org/plugins/autoptimize/" target="_blank">https://wordpress.org/plugins/autoptimize/</a></p>';
+			$return .= '<p>' . AJ_TITLE . __(' has detected that you do not have Autoptimize installed and active.  Autoptimize can provide further optimization of JavaScript which can benefit the results of ' . AJ_TITLE . ' (and ' . AJ_TITLE . ' can also enhance Autoptimize results!)</p>','asyncjs');
+			$return .= '<p>'. __('You can install Autoptimize from the plugin repository, or download it from here: ','asyncjs') .'<a href="https://wordpress.org/plugins/autoptimize/" target="_blank">https://wordpress.org/plugins/autoptimize/</a></p>';
 		}
-		$return .= '<p>Through our testing the following common Autoptimize settings work well to achieve the best results.  Of course each website is different so you may need to fine tune these settings to suit.</p>';
+		$return .= '<p>'. __('Through our testing the following common Autoptimize settings work well to achieve the best results.  Of course each website is different so you may need to fine tune these settings to suit.</p>','asyncjs');
 		$return .= '<ol>';
-                $return .= '<li>Navigate to <strong>Settings &gt; Autoptimize</strong></li>';
-                $return .= '<li>Click on the <strong>Show advanced settings</strong> button</li>';
-                $return .= '<li>Under <strong>JavaScript Options</strong> set the following:</li>';
+                $return .= '<li>'. __('Navigate to <strong>Settings &gt; Autoptimize</strong></li>','asyncjs');
+                $return .= '<li>'. __('Click on the <strong>Show advanced settings</strong> button</li>','asyncjs');
+                $return .= '<li>'. __('Under <strong>JavaScript Options</strong> set the following:</li>','asyncjs');
                 $return .= '<ul>';
-                $return .= '<li><strong>Optimize JavaScript Code?</strong>: Checked</li>';
-                $return .= '<li><strong>Force JavaScript in &lt;head&gt;?</strong>: Unchecked</li>';
-                $return .= '<li><strong>Also aggregate inline JS?</strong>: Checked<br />(did you need to exclude jQuery in ' . AJ_TITLE . '? Enabling this option <strong><em>MAY</em></strong> help resolve jQuery errors caused by inline JavaScript / jQuery code)</li>';
-                $return .= '<li><strong>Exclude scripts from Autoptimize:</strong>: Leave as default (or add any other scripts that you may need to exclude)</li>';
-                $return .= '<li><strong>Add try-catch wrapping?</strong>: Unchecked</li>';
+                $return .= '<li><strong>'. __('Optimize JavaScript Code?</strong>: Checked</li>','asyncjs');
+                $return .= '<li><strong>'. __('Force JavaScript in &lt;head&gt;?</strong>: Unchecked</li>','asyncjs');
+                $return .= '<li><strong>'. __('Also aggregate inline JS?</strong>: Checked<br />(did you need to exclude jQuery in ' . AJ_TITLE . '? Enabling this option <strong><em>MAY</em></strong> help resolve jQuery errors caused by inline JavaScript / jQuery code)</li>','asyncjs');
+                $return .= '<li><strong>'. __('Exclude scripts from Autoptimize:</strong>: Leave as default (or add any other scripts that you may need to exclude)</li>','asyncjs');
+                $return .= '<li><strong>'. __('Add try-catch wrapping?</strong>: Unchecked</li>','asyncjs');
                 $return .= '</ul>';
-                $return .= '<li>Click on the <strong>Save Changes and Empty Cache</strong> button</li>';
-                $return .= '<li>Navigate to <strong>Settings &gt; ' . AJ_TITLE . '</strong></li>';
-                $return .= '<li>Click on the <strong>Settings</strong> tab</li>';
-                $return .= '<li>Scroll down to <strong>' . AJ_TITLE . ' For Plugins</strong></li>';
-                $return .= '<li>Under <strong>Autoptimize</strong> set the following:</li>';
+                $return .= '<li>'. __('Click on the <strong>Save Changes and Empty Cache</strong> button</li>','asyncjs');
+                $return .= '<li>'. __('Navigate to <strong>Settings &gt; ' . AJ_TITLE . '</strong></li>','asyncjs');
+                $return .= '<li>'. __('Click on the <strong>Settings</strong> tab</li>','asyncjs');
+                $return .= '<li>'. __('Scroll down to <strong>' . AJ_TITLE . ' For Plugins</strong></li>','asyncjs');
+                $return .= '<li>'. __('Under <strong>Autoptimize</strong> set the following:</li>','asyncjs');
                 $return .= '<ul>';
-                $return .= '<li><strong>Enable Autoptimize Support</strong>: Checked</li>';
-                $return .= '<li><strong>Method</strong>: Select either <strong>Async</strong> or <strong>Defer</strong> (testing has found that <strong>Defer</strong> usually works best here!)</li>';
+                $return .= '<li><strong>'. __('Enable Autoptimize Support</strong>: Checked</li>','asyncjs');
+                $return .= '<li>'. __('<strong>Method</strong>: Select either <strong>Async</strong> or <strong>Defer</strong> (testing has found that <strong>Defer</strong> usually works best here!)</li>','asyncjs');
                 $return .= '</ul>';
-                $return .= '<li>Click on <strong>Save Changes</strong></li>';
+                $return .= '<li>'. __('Click on <strong>Save Changes</strong></li>','asyncjs');
 		$return .= '</ol>';
 		return $return;
 	}
