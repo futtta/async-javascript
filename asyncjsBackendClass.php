@@ -17,7 +17,7 @@ class AsyncJavaScriptBackend {
         define( 'AJ_ADMIN_URL', trailingslashit( admin_url() ) );
         define( 'AJ_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
         define( 'AJ_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-        define( 'AJ_VERSION', '2018.03.10' );
+        define( 'AJ_VERSION', '2.18.03.10' );
         define( 'AJ_UA', 'Async JavaScript/' . AJ_VERSION . ' (+https://autoptimize.com/)' );
         add_action( 'admin_enqueue_scripts', array( $this, 'aj_enqueue_scripts' ) );
         add_action( 'plugins_loaded', array( $this, 'aj_admin_init' ) );

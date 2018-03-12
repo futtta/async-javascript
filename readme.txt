@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async,javascript,pagespeed,performance,render blocking
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 2018.03.10
+Stable tag: 2.18.03.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,138 +61,63 @@ Coming soon!
 
 == Changelog ==
 
-= 2018.03.10 =
+= 2.18.03.10 =
+
 * ASync JS is now maintained by Frank Goossens (Optimizing Matters), thanks for the great job done David!
 * Moved all Pro features into the standard version.
+* Some code refactoring
+* Made strings ready for translations
 
-= 2017.11.15 =
+= 2.17.11.15 =
 
 * MOD: Added User Agent to GTMetrix requests
 
-= 2017.11.03 =
+= 2.17.11.03 =
 
 * MOD: Check for GTMetrix class existance prior to including class
 
-= 2017.10.18 =
+= 2.17.10.18 =
 
 * FIX: Issue converting array for plugin & theme exclusions
 
-= 2017.09.30 =
+= 2.17.09.30 =
 
 * FIX: Sanitise all $_GET and all $_POST
 * FIX: Add nonce to ajax calls
 
-= 2017.06.13 =
+= 2.17.06.13 =
 
 * MOD: Dashboard Widget and Notices only available to Administrators
 
-= 2017.05.08 =
+= 2.17.05.08 =
 
 * NEW: Added quick settings buttons to allow common settings to be quickly applied
 * NEW: Added current version info to help page
 
-= 2017.05.07 =
+= 2.17.05.07 =
 
 * FIX: Some installs not saving plugin / theme exclusions due to theme incompatibility
 
-= 2017.05.06 =
+= 2.17.05.06 =
 
 * MOD/FIX: On some WordPress installs is_plugin_active function being called too early. Moved is_plugin_active into dedicated function called via admin_init as per codex: https://codex.wordpress.org/Function_Reference/is_plugin_active
 
-= 2017.05.05 =
+= 2.17.05.05 =
 
 * FIX: Incorrect textarea identifier preventing exclusion save
 
-= 2017.05.04 =
+= 2.17.05.04 =
 
 * FIX: Resolve early loading of plugin causing fatal error due to function not available yet
 * FIX: CSS / JS not loading
 
-= 2017.05.03 =
+= 2.17.05.03 =
 
 * MOD: Add test to advise running Wizard is not mandatory
 
-= 2017.05.01 =
+= 2.17.05.01 =
 
 * massive Massive MASSIVE rewrite of Async JavaScript!!!
 * Now includes a setup Wizard, Status page, Settings page and a help page.
 * Communicates directly with GTmetrix (account required)
 * Automaticall transfers existing settings from Async JavaScript to Async JavaScript
-
-= 2017.01.14 =
-
-* FIX: Update plugin updater to address possible issue in PHP7
-
-= 2016.12.29 =
-
-* MOD: Updated readme with clearer instructions on how to find settings menu in admin
-
-= 2016.09.30 =
-
-* MOD: Better detection of jQuery core file
-
-= 2016.08.17 =
-
-* FIX: Typo in variable name
-
-= 2016.08.15 =
-
-* NEW: Select jQuery handler
-* NEW: Select Autoptimize handler
-* NEW: Ability to exclude Themes
-
-= 2016.07.04 =
-
-* MOD: Add check for null input for exclusions
-* FIX: Undefined variable
-
-= 2016.06.26 =
-
-* FIX: Plugin exclusions not populating correctly for plugins without a TextDomain defined
-
-= 2016.06.22 =
-
-* FIX: Settings being wiped on other tabs on save
-* MOD: Removed licencing due to host blocking a high number of IP's listed as Blacklisted
-* MOD: Moved menu item to Settings menu
-* MOD: Fixed spelling of 'JavaScript' to 'JavaScript'
-
-= 2016.04.18 =
-
-* MOD: adjust code to remove php notice
-
-= 2016.04.14 =
-
-* MOD: adjust code to remove php notice
-* MOD: use CURL for licence query or fallback if CURL not available
-* MOD: better debugging
-
-= 2016.03.22 =
-
-* FIX: wp-WP_Error error.
-
-= 2016.03.21 =
-
-* FIX: Re-enabled licence check, reported issue found to be originating website error not licence server error.
-* NEW: Added information regarding purpose of licence.
-* NEW: If communication with the licence server fails the error will be displayed for troubleshooting purposes.
-
-= 2016.03.18 =
-
-* BUG: Disabled licence check as some websites were unable to communicate with licence server. To be resolved in future release.
-
-= 2016.02.15 =
-
-* NEW: Added Plugin Exclusion
-
-= 2016.02.08 =
-
-* NEW: Added Plugin Update Logic
-
-= 2016.01.14 =
-
-* MOD: Updated instructional text for plugins
-
-= 2016.01.13 =
-
-* Genesis
