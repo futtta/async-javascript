@@ -4,7 +4,7 @@
  * Plugin URI: https://autoptimize.com/
  * Description: Async JavaScript gives you full control of which scripts to add a 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website
  * Version: 2.18.03.10
- * Author: optimizingmatters
+ * Author: Frank Goossens (futtta)
  * Author URI: https://autoptimize.com/
  * Text Domain: async-javascript
  * License: GNU General Public License v2 or later
