@@ -1,7 +1,7 @@
 === Async JavaScript ===
 Contributors: (cloughit), optimizingmatters, futtta
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
-Tags: async,javascript,pagespeed,performance,render blocking
+Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.4
 Tested up to: 4.9
 Stable tag: 2.18.03.10
@@ -13,9 +13,9 @@ Async Javascript gives you lets you add 'async' or 'defer' attribute to scripts 
 == Description ==
 Eliminate Render-blocking Javascript in above-the-fold content with Async Javascript.
 
-Render-blocking Javascript prevents above-the-fold content on your page from being rendered until the javascript has finished loading.  This can impact on your page speed and ultimately your ranking within search engines.  It can also impact your users experience.
+Render-blocking Javascript prevents above-the-fold content on your page from being rendered until the javascript has finished loading. This can impact on your page speed and ultimately your ranking within search engines. It can also impact your users experience.
 
-Async JavaScript gives you full control of which scripts to add a 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website
+Async JavaScript gives you full control of which scripts to add a 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website.
 
 == Installation ==
 Installation is very straightforward:
@@ -113,7 +113,7 @@ Coming soon!
 
 = 2.17.05.03 =
 
-* MOD: Add test to advise running Wizard is not mandatory
+* MOD: Add text to advise running Wizard is not mandatory
 
 = 2.17.05.01 =
 
