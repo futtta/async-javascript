@@ -6,7 +6,7 @@
  * Version: 2.18.03.10
  * Author: Frank Goossens (futtta)
  * Author URI: https://autoptimize.com/
- * Text Domain: async-javascript
+ * Text Domain: asyncjs
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
