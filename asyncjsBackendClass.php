@@ -19,7 +19,6 @@ class AsyncJavaScriptBackend {
         define( 'AJ_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
         define( 'AJ_VERSION', '2.18.03.10' );
         define( 'AJ_UA', 'Async JavaScript/' . AJ_VERSION . ' (+https://autoptimize.com/)' );
-        add_action( 'admin_enqueue_scripts', array( $this, 'aj_enqueue_scripts' ) );
         add_action( 'plugins_loaded', array( $this, 'aj_admin_init' ) );
         add_action( 'admin_init', array( $this, 'aj_disable_pro' ) );
     }
@@ -225,7 +224,7 @@ class AsyncJavaScriptBackend {
      *  @return     n/a
      */
     public function async_javascript_menu() {
-        add_submenu_page(
+        $asj_page = add_submenu_page(
                 'options-general.php',
                 AJ_TITLE . ' Admin',
                 AJ_TITLE,
@@ -233,6 +232,7 @@ class AsyncJavaScriptBackend {
                 'async-javascript',
                 array( $this, 'async_javascript_admin' )
         );
+	add_action( 'admin_print_scripts-'.$asj_page, array( $this, 'aj_enqueue_scripts' ) );
     }
 
     /**
