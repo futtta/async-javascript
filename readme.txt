@@ -8,7 +8,7 @@ Stable tag: 2.18.03.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Async Javascript gives you lets you add 'async' or 'defer' attribute to scripts to exclude to help increase the performance of your WordPress website.
+Async Javascript lets you add 'async' or 'defer' attribute to scripts to exclude to help increase the performance of your WordPress website.
 
 == Description ==
 Eliminate Render-blocking Javascript in above-the-fold content with Async Javascript.
