@@ -5,7 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <table class="form-table" width="100%" cellpadding="10">
     <tr>
-        <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/stick_figure_panicking_150_clr_13267.gif" title="Help &amp; Support" alt="Help &amp; Support"  class="aj_step_img"></td>
         <td scope="row" align="left" style="vertical-align: top !important;">
             <h3><?php _e('Help &amp; Support','asyncjs'); ?></h3>
             <p style="font-size: 0.7em;"><strong><?php _e('Installed Version: ','asyncjs'); ?></strong><?php echo AJ_VERSION; ?></p>
