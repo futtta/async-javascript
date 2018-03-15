@@ -2,7 +2,7 @@
 Contributors: (cloughit), optimizingmatters, futtta
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
-Requires at least: 4.4
+Requires at least: 4.6
 Tested up to: 4.9
 Stable tag: 2.18.03.10
 License: GPLv2 or later
