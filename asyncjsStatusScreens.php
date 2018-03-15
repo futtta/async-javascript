@@ -90,7 +90,7 @@ $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'as
                 $report = $latest['results']['report_url'];
                 $report_url = '<a href="' . $report . '" target="_blank">' . $report . '</a>';
                 ?>
-                <p id="aj_latest_please_wait"><img src="<?php echo AJ_PLUGIN_URL; ?>images/loading.gif" title="<?php _e('Please Wait','asyncjs'); ?>" alt="<?php _e('Please Wait','asyncjs'); ?>" class="aj_step_img"></p>
+                <div id="aj_latest_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
                 <table id="aj_latest_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                     <tr>
                         <td scope="row" align="center"><img src="data:image/jpeg;base64,<?php echo $screenshot; ?>" class="aj_latest_screenshot aj_gtmetrix_screenshot">
