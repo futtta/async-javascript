@@ -287,7 +287,7 @@ class AsyncJavaScriptBackend {
 		$return = '';
 		$return .= '<p>'.__('When a JavaScript file is loaded via the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function, ' . AJ_TITLE . ' will add an <strong>async</strong> or <strong>defer</strong> attribute.','asyncjs').'</p>';
 		$return .= '<p>'.__('There are several ways an external JavaScript file can be executed:','asyncjs').'</p>';
-		$return .= '<ul">';
+		$return .= '<ul>';
         $return .= '<li>'.__('If <strong>async</strong> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</li>','asyncjs');
         $return .= '<li>'.__('If <strong>defer</strong> is present and <strong>async</strong> is not present: The script is executed when the page has finished parsing</li>','asyncjs');
         $return .= '<li>'.__('If neither <strong>async</strong> or <strong>defer</strong> is present: The script is fetched and executed immediately, before the browser continues parsing the page</li>','asyncjs');
