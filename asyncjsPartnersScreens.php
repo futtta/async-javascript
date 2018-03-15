@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     margin-bottom:10px;
 }
 .itemImage {
-    text-align: center;        
+    text-align: center;
 }
 .itemImage img {
     max-width: 95%;
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .itemButton a:hover {
     text-decoration: none;
     color: #23282d;
-}    
+}
 </style>
 <?php
     echo '<h2>'. __("These related services can improve your site's performance even more!",'asyncjs') . '</h2>';
@@ -70,7 +70,7 @@ function getasyncJSPartnerFeed() {
         $maxitems = 0;
 
         if ( ! is_wp_error( $rss ) ) {
-            $maxitems = $rss->get_item_quantity( 20 ); 
+            $maxitems = $rss->get_item_quantity( 20 );
             $rss_items = $rss->get_items( 0, $maxitems );
         } ?>
         <ul>
@@ -78,7 +78,7 @@ function getasyncJSPartnerFeed() {
             if ( $maxitems == 0 ) {
                 echo $noFeedText;
             } else {
-                foreach ( $rss_items as $item ) : 
+                foreach ( $rss_items as $item ) :
                     $itemURL = esc_url( $item->get_permalink() ); ?>
                     <li class="itemDetail">
                         <h3 class="itemTitle"><a href="<?php echo $itemURL; ?>" target="_blank"><?php echo esc_html( $item->get_title() ); ?></a></h3>
