@@ -30,14 +30,12 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
 ?>
 <table class="form-table" width="100%" cellpadding="10">
     <tr id="aj_intro">
-            <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/finger_point_out_punch_hole_400_clr_17860.png" title="<?php echo AJ_TITLE; ?>" alt="<?php echo AJ_TITLE; ?>"  class="aj_step_img"></td>
             <td scope="row" align="left" style="vertical-align: top !important;">
                     <h3><?php echo AJ_TITLE; ?></h3>
                     <?php echo $this->about_aj(); ?>
             </td>
     </tr>
     <tr id="aj_quick_settings">
-            <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/clock_fast_times_text_10762.gif" title="Quick Settings" alt="Quick Settings"  class="aj_step_img"></td>
             <td scope="row" align="left" style="vertical-align: top !important;">
                     <h3><?php _e('Quick Settings','asyncjs'); ?></h3>
                     <p><?php _e('Use the buttons below to apply common settings.','asyncjs'); ?></p>
@@ -51,7 +49,6 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
             </td>
     </tr>
     <tr id="aj_settings_enable">
-        <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/finger_point_out_punch_hole_400_clr_17860.png" title="Enable <?php echo AJ_TITLE; ?>" alt="Enable <?php echo AJ_TITLE; ?>"  class="aj_step_img"></td>
         <td scope="row" align="left" style="vertical-align: top !important;">
             <h3><?php _e('Enable ','asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
             <p><label><?php _e('Enable ','asyncjs'); ?><?php echo AJ_TITLE; ?>? </label><input type="checkbox" id="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> /></p>

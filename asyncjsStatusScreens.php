@@ -32,7 +32,6 @@ $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'as
 ?>
 <table class="form-table" width="100%" cellpadding="10">
     <tr>
-        <td scope="row" align="center" style="vertical-align: top !important;"><img src="<?php echo AJ_PLUGIN_URL; ?>images/finger_point_out_punch_hole_400_clr_17860.png" title="Most Recent GTmetrix Results" alt="Most Recent GTmetrix Results"  class="aj_step_img"></td>
         <td scope="row" align="left">
             <h3><?php echo AJ_TITLE; ?></h3>
             <ul>
