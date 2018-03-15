@@ -101,7 +101,6 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         </td>
     </tr>
     <tr id="aj_step2b" class="aj_steps_hidden">
-        <td scope="row" align="center"></td>
         <td scope="row" align="left">
             <h3><?php _e('Testing: Async','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method.",'asyncjs'); ?></p>
@@ -136,7 +135,6 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         </td>
     </tr>
     <tr id="aj_step2c" class="aj_steps_hidden">
-        <td scope="row" align="center"></td>
         <td scope="row" align="left">
             <h3><?php _e('Testing: Defer','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method.",'asyncjs');?></p>
@@ -171,7 +169,6 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         </td>
     </tr>
     <tr id="aj_step2d" class="aj_steps_hidden">
-        <td scope="row" align="center"></td>
         <td scope="row" align="left">
             <h3><?php _e('Testing: Async (jQuery excluded)','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method but excluding jQuery.",'asyncjs');?></p>
@@ -206,7 +203,6 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         </td>
     </tr>
     <tr id="aj_step2e" class="aj_steps_hidden">
-        <td scope="row" align="center"></td>
         <td scope="row" align="left">
             <h3><?php _e('Testing: Defer (jQuery excluded)','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method but excluding jQuery.",'asyncjs');?></p>
