@@ -61,7 +61,7 @@ Coming soon!
 
 == Changelog ==
 
-= 2.18.03.10 =
+= 2.18.03.15 =
 
 * bugfix: only load asyncjs' JS & CSS on own settings page [as reported by Marat Petrov](https://wordpress.org/support/topic/error-after-update-117/)
 * bugfix: check if jQuery chosen is correctly loaded before using it (based on same report, thanks Marat!)
