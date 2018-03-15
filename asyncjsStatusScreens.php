@@ -154,7 +154,7 @@ $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'as
             ?>
             <p><?php _e('Please click on the button below to generate a new GTmetrix Report.','asyncjs'); ?></p>
             <p><?php _e('<strong>Please Note:</strong> By clicking the button below you acknowledge that you understand that one (1) GTmetrix API credit will be used.','asyncjs'); ?></p>
-            <p><button data-id="aj_gtmetrix_test" class="aj_steps_button"><?php _e('Run GTmetrix Test','asyncjs'); ?></button></p>
+            <p><button data-id="aj_gtmetrix_test" class="aj_steps_button button"><?php _e('Run GTmetrix Test','asyncjs'); ?></button></p>
             <h3><?php _e('GTmetrix API Key','asyncjs'); ?></h3>
             <p><?php _e("If you haven't already done so, grab an API Key from GTmetrix so that Async JavaScript can obtain your PageSpeed / YSlow results.  Here's how:",'asyncjs'); ?></p>
             <ol>

@@ -102,6 +102,6 @@ $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'as
     }
     ?>
     <p><?php _e('Please click on the Settings button below to generate a new GTmetrix Report.','asyncjs'); ?></p>
-    <p><button data-id="aj_goto_settings" class="aj_steps_button"><?php _e('Settings','asyncjs'); ?></button></p>
+    <p><button data-id="aj_goto_settings" class="aj_steps_button button"><?php _e('Settings','asyncjs'); ?></button></p>
 </div>
 <?php
