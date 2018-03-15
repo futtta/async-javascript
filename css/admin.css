@@ -16,8 +16,8 @@
 #aj_step2c_gtmetrix_results td,
 #aj_step2d_gtmetrix_results td,
 #aj_step2e_gtmetrix_results td {
-  vertical-align: top !important;
-  text-align: center !important;
+  vertical-align: top;
+  text-align: center;
 }
 .aj_gtmetrix_result {
   font-size: 2rem;
@@ -37,13 +37,13 @@
 }
 
 .aj-steps-table h3 {
-  height: 2em !important;
+  height: 2em;
 }
 .aj_step_img {
   max-width: 150px;
 }
 .aj_field_error {
-  border: solid 1px #ff0000 !important;
+  border: solid 1px #ff0000;
 }
 #aj_notification {
   position: fixed;
@@ -72,14 +72,14 @@
   font-weight: bold;
 }
 .aj ol {
-  list-style-type: decimal !important;
+  list-style-type: decimal;
 }
 .aj ul {
-  list-style-type: circle !important;
+  list-style-type: circle;
 }
 .aj ol,
 .aj ul {
-  margin-left: 2em !important;
+  margin-left: 2em;
 }
 .aj_plugin {
   border: solid 1px #cccccc;
