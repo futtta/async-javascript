@@ -87,8 +87,8 @@ class AsyncJavaScriptBackend {
      */
     public function aj_enqueue_scripts() {        
         // chosen
-        wp_enqueue_style('chosen', plugins_url( 'assets/lib/chosen_v1.4.2/chosen.min.css', __FILE__ ));
-        wp_enqueue_script('chosen', plugins_url( 'assets/lib/chosen_v1.4.2/chosen.jquery.min.js', __FILE__ ), array( 'jquery' ), AJ_VERSION, true);
+        wp_enqueue_style('chosen', plugins_url( 'assets/lib/chosen/chosen.min.css', __FILE__ ));
+        wp_enqueue_script('chosen', plugins_url( 'assets/lib/chosen/chosen.jquery.min.js', __FILE__ ), array( 'jquery' ), AJ_VERSION, true);
 
         // own JS & CSS
         wp_enqueue_style('aj_admin_styles', plugins_url( '/css/admin.min.css', __FILE__ ));
