@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 2.18.03.10
+Stable tag: 2.18.03.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,13 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 Coming soon!
 
 == Changelog ==
+
+= 2.18.03.10 =
+
+* bugfix: only load asyncjs' JS & CSS on own settings page [as reported by Marat Petrov](https://wordpress.org/support/topic/error-after-update-117/)
+* bugfix: check if jQuery chosen is correctly loaded before using it (based on same report, thanks Marat!)
+* update jQuery Chosen lib
+* small readme tweaks
 
 = 2.18.03.10 =
 
