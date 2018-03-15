@@ -161,6 +161,7 @@ class AsyncJavaScriptBackend {
         }
         
         add_action( 'wp_dashboard_setup', array( $this, 'register_aj_dashboard_widget' ) );
+        add_action( 'wp_dashboard_setup', array( $this, 'aj_enqueue_scripts' ) );
         add_action( 'admin_menu', array( $this, 'async_javascript_menu' ) );
         add_action( 'wp_ajax_aj_steps', array( $this, 'aj_steps' ) );
         add_action( 'admin_notices', array( $this, 'aj_admin_notice' ) );
