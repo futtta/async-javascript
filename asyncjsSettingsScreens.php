@@ -30,13 +30,13 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
 ?>
 <table class="form-table" width="100%" cellpadding="10">
     <tr id="aj_intro">
-            <td scope="row" align="left" style="vertical-align: top !important;">
+            <td>
                     <h3><?php echo AJ_TITLE; ?></h3>
                     <?php echo $this->about_aj(); ?>
             </td>
     </tr>
     <tr id="aj_quick_settings">
-            <td scope="row" align="left" style="vertical-align: top !important;">
+            <td>
                     <h3><?php _e('Quick Settings','asyncjs'); ?></h3>
                     <p><?php _e('Use the buttons below to apply common settings.','asyncjs'); ?></p>
                     <p><?php _e('<strong>Note: </strong>Using the buttons below will erase any current settings within ','asyncjs'); ?><?php echo AJ_TITLE; ?>.</p>
@@ -49,7 +49,7 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
             </td>
     </tr>
     <tr id="aj_settings_enable">
-        <td scope="row" align="left" style="vertical-align: top !important;">
+        <td>
             <h3><?php _e('Enable ','asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
             <p><label><?php _e('Enable ','asyncjs'); ?><?php echo AJ_TITLE; ?>? </label><input type="checkbox" id="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> /></p>
             <hr />
