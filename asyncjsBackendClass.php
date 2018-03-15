@@ -3,9 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-/* 
+/*
  * Backend logic: kicking in admin logic, screens & Ajax
- * 
+ *
  */
 
 class AsyncJavaScriptBackend {
@@ -25,7 +25,7 @@ class AsyncJavaScriptBackend {
 
     /**
      * the plugin instance
-     * 
+     *
      */
     private static $instance = NULL;
 
@@ -43,7 +43,7 @@ class AsyncJavaScriptBackend {
 
     /**
      * aj_activate()
-     * 
+     *
      */
     public static function aj_activate() {
 
@@ -51,17 +51,17 @@ class AsyncJavaScriptBackend {
 
     /**
      * plugin deactivate
-     * 
+     *
      */
     public static function aj_deactivate() {
-        
+
     }
 
     /**
      * plugin uninstaller
-     * 
+     *
      * removes (hopefully all) options
-     * 
+     *
      */
     public static function aj_uninstall() {
         $optionsToRemove = array('aj_async','aj_autoptimize_enabled','aj_autoptimize_method','aj_defer','aj_enabled','aj_exclusions','aj_gtmetrix_api_key','aj_gtmetrix_results','aj_gtmetrix_server','aj_gtmetrix_username','aj_jquery','aj_method','aj_plugin_exclusions','aj_theme_exclusions','aj_version');
@@ -85,7 +85,7 @@ class AsyncJavaScriptBackend {
      *  register admin stylesheets and javascripts
      *
      */
-    public function aj_enqueue_scripts() {        
+    public function aj_enqueue_scripts() {
         // chosen
         wp_enqueue_style('chosen', plugins_url( 'assets/lib/chosen/chosen.min.css', __FILE__ ));
         wp_enqueue_script('chosen', plugins_url( 'assets/lib/chosen/chosen.jquery.min.js', __FILE__ ), array( 'jquery' ), AJ_VERSION, true);
@@ -126,11 +126,11 @@ class AsyncJavaScriptBackend {
         global $wp, $wpdb;
         register_activation_hook( __FILE__, array( $this, 'aj_activate' ) );
         register_deactivation_hook( __FILE__, array( $this, 'aj_deactivate' ) );
-        
+
         if ( !class_exists( 'Services_WTF_Test' ) ) {
             require_once( AJ_PLUGIN_DIR . 'lib/gtmetrix/class.Services_WTF_Test.php' );
         }
-        
+
         // check if upgrading from early release so settings can be transferred
         $aj_version = get_option( 'aj_version', '' );
         if ( $aj_version == '' || $aj_version < '2017.04.25' ) {
@@ -155,11 +155,11 @@ class AsyncJavaScriptBackend {
             update_option( 'aj_autoptimize_enabled', $aj_autoptimize_enabled );
             update_option( 'aj_autoptimize_method', $aj_autoptimize_method );
         }
-        
+
         if ( $aj_version != AJ_VERSION ) {
             update_option( 'aj_version', AJ_VERSION );
         }
-        
+
         add_action( 'wp_dashboard_setup', array( $this, 'register_aj_dashboard_widget' ) );
         add_action( 'wp_dashboard_setup', array( $this, 'aj_enqueue_scripts' ) );
         add_action( 'admin_menu', array( $this, 'async_javascript_menu' ) );
@@ -287,7 +287,7 @@ class AsyncJavaScriptBackend {
 		$return = '';
 		$return .= '<p>'.__('When a JavaScript file is loaded via the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function, ' . AJ_TITLE . ' will add an <strong>async</strong> or <strong>defer</strong> attribute.','asyncjs').'</p>';
 		$return .= '<p>'.__('There are several ways an external JavaScript file can be executed:','asyncjs').'</p>';
-		$return .= '<ul style="list-style:disc inside;">';
+		$return .= '<ul">';
         $return .= '<li>'.__('If <strong>async</strong> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</li>','asyncjs');
         $return .= '<li>'.__('If <strong>defer</strong> is present and <strong>async</strong> is not present: The script is executed when the page has finished parsing</li>','asyncjs');
         $return .= '<li>'.__('If neither <strong>async</strong> or <strong>defer</strong> is present: The script is fetched and executed immediately, before the browser continues parsing the page</li>','asyncjs');
@@ -295,7 +295,7 @@ class AsyncJavaScriptBackend {
 		$return .= '<p>'.__('Using <strong>async</strong> or <strong>defer</strong> helps to eliminate render-blocking JavaScript in above-the-fold content.  This can also help to increase your pagespeed which in turn can assist in improving your page ranking.</p>','asyncjs');
 		return $return;
 	}
-    
+
 	/**
 	 *  hints_tips()
 	 *
@@ -336,7 +336,7 @@ class AsyncJavaScriptBackend {
 		$return .= '</ol>';
 		return $return;
 	}
- 
+
     /**
      *  aj_steps()
      *
