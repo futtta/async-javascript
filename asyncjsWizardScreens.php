@@ -62,7 +62,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
                 <li><?php _e('GTmetrix Credits Available: ','asyncjs'); ?><span class="aj_gtmetrix_credits"><?php echo $credits; ?></span></li>
             </ol>
             <p><?php _e('<strong>Please Note:</strong> By clicking the button below you acknowledge that you understand that five (5) GTmetrix API credits will be used.','asyncjs'); ?></p>
-            <p><button data-id="aj_step2" class="aj_steps_button"><?php _e('Proceed to Step 2','asyncjs'); ?></button></p>
+            <p><button data-id="aj_step2" class="aj_steps_button button"><?php _e('Proceed to Step 2','asyncjs'); ?></button></p>
         </td>
     </tr>
     <tr id="aj_step2" class="aj_steps_hidden">
@@ -246,7 +246,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
                 <li><?php _e('Simulate','asyncjs');?> <span class="aj_gtmetrix_config"></span>: <a href="" id="aj_gtmetrix_best_url" target="_blank"></a></li>
             </ul>
             <p><?php _e('Once you have simulated','asyncjs');?> <span class="aj_gtmetrix_config"></span> <?php _e('click on the button below to continue.','asyncjs');?></p>
-            <p><button data-id="aj_step4" class="aj_steps_button"><?php _e('Proceed to Step 4','asyncjs');?></button></p>
+            <p><button data-id="aj_step4" class="aj_steps_button button"><?php _e('Proceed to Step 4','asyncjs');?></button></p>
         </td>
     </tr>
     <tr id="aj_step4" class="aj_steps_hidden">
@@ -256,7 +256,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
             <p><input type="radio" name="aj_step4_check" value="y"> <?php _e('Yes','asyncjs');?> <input type="radio" name="aj_step4_check" value="n"> <?php _e('No','asyncjs');?></p>
             <div id="aj_step4_y">
                 <p><?php _e('Great to hear! To apply these settings click the button below.','asyncjs');?></p>
-                <p><button data-id="aj_apply_settings" class="aj_steps_button"><?php _e('Apply Settings','asyncjs');?></button></p>
+                <p><button data-id="aj_apply_settings" class="aj_steps_button button"><?php _e('Apply Settings','asyncjs');?></button></p>
             </div>
             <div id="aj_step4_n">
                 <p><?php _e('Ok, so you have run the simulation on <span class="aj_gtmetrix_config"></span> and although there has been an improvement in reported performance, the simulation shows that something is not right with your site.','asyncjs');?></p>
@@ -271,13 +271,13 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
                     </ul>
                     <p><?php _e('Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.','asyncjs');?></p>
                     <p>
-                        <button data-id="aj_step2b_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2b_gtmetrix"></button>
-                        <button data-id="aj_step2c_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2c_gtmetrix"></button>
-                        <button data-id="aj_step2d_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
-                        <button data-id="aj_step2e_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
+                        <button data-id="aj_step2b_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2b_gtmetrix"></button>
+                        <button data-id="aj_step2c_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2c_gtmetrix"></button>
+                        <button data-id="aj_step2d_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
+                        <button data-id="aj_step2e_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
                     </p>
                     <p>
-                        <button data-id="aj_goto_settings" class="aj_steps_button"><?php _e('Settings','asyncjs');?></button>
+                        <button data-id="aj_goto_settings" class="aj_steps_button button"><?php _e('Settings','asyncjs');?></button>
                     </p>
                 </div>
                 <div id="aj_step4_jquery_not_excluded">
@@ -289,11 +289,11 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
                     </ul>
                     <p><?php _e('Click one of the buttons below to apply these settings or click the Settings button to go to the settings page for manual configuration.','asyncjs');?></p>
                     <p>
-                        <button data-id="aj_step2d_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
-                        <button data-id="aj_step2e_apply" class="aj_steps_button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
+                        <button data-id="aj_step2d_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2d_gtmetrix"></button>
+                        <button data-id="aj_step2e_apply" class="aj_steps_button button"><?php _e('Apply','asyncjs');?> <span class="aj_step2e_gtmetrix"></button>
                     </p>
                     <p>
-                        <button data-id="aj_goto_settings" class="aj_steps_button"><?php _e('Settings','asyncjs');?></button>
+                        <button data-id="aj_goto_settings" class="aj_steps_button button"><?php _e('Settings','asyncjs');?></button>
                     </p>
                 </div>
             </div>
@@ -302,7 +302,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
     <tr id="aj_step5" class="aj_steps_hidden">
         <td scope="row" align="left">
             <?php echo $this->hints_tips(); ?>
-            <p><button data-id="aj_goto_settings" class="aj_steps_button">Settings</button></p>
+            <p><button data-id="aj_goto_settings" class="aj_steps_button button">Settings</button></p>
         </td>
     </tr>
 </table>

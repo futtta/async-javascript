@@ -41,10 +41,10 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
                     <p><?php _e('Use the buttons below to apply common settings.','asyncjs'); ?></p>
                     <p><?php _e('<strong>Note: </strong>Using the buttons below will erase any current settings within ','asyncjs'); ?><?php echo AJ_TITLE; ?>.</p>
                     <p>
-                            <button data-id="aj_step2b_apply" class="aj_steps_button"><?php _e('Apply Async','asyncjs'); ?></button>
-                            <button data-id="aj_step2c_apply" class="aj_steps_button"><?php _e('Apply Defer','asyncjs'); ?></button>
-                            <button data-id="aj_step2d_apply" class="aj_steps_button"><?php _e('Apply Async','asyncjs'); _e(' (jQuery excluded)','asyncjs'); ?></button>
-                            <button data-id="aj_step2e_apply" class="aj_steps_button"><?php _e('Apply Defer','asyncjs'); _e(' (jQuery excluded)','asyncjs'); ?></button>
+                            <button data-id="aj_step2b_apply" class="aj_steps_button button"><?php _e('Apply Async','asyncjs'); ?></button>
+                            <button data-id="aj_step2c_apply" class="aj_steps_button button"><?php _e('Apply Defer','asyncjs'); ?></button>
+                            <button data-id="aj_step2d_apply" class="aj_steps_button button"><?php _e('Apply Async','asyncjs'); _e(' (jQuery excluded)','asyncjs'); ?></button>
+                            <button data-id="aj_step2e_apply" class="aj_steps_button button"><?php _e('Apply Defer','asyncjs'); _e(' (jQuery excluded)','asyncjs'); ?></button>
                     </p>
             </td>
     </tr>
@@ -141,7 +141,7 @@ $aj_autoptimize_defer = ( $aj_autoptimize_method == 'defer' ) ? ' checked="check
                     <?php
             }
             ?>
-            <p><button data-id="aj_save_settings" class="aj_steps_button"><?php _e('Save Settings','asyncjs'); ?></button></p>
+            <p><button data-id="aj_save_settings" class="aj_steps_button button"><?php _e('Save Settings','asyncjs'); ?></button></p>
         </td>
     </tr>
 </table>
