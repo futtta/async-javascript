@@ -69,7 +69,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         <td scope="row" align="left">
             <h3><?php _e('Step 2: Initial Test Results','asyncjs'); ?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e('will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores.','asyncjs'); ?></p>
-            <div id="aj_step2_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
+            <div id="aj_step2_please_wait"><div class="aj_loader"><h3 class="aj_loader_loading_text"><?php _e('Please Wait','asyncjs'); ?></h3></div></div>
             <table id="aj_step2_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2_screenshot aj_gtmetrix_screenshot">
@@ -104,7 +104,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         <td scope="row" align="left">
             <h3><?php _e('Testing: Async','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method.",'asyncjs'); ?></p>
-            <div id="aj_step2b_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
+            <div id="aj_step2b_please_wait"><div class="aj_loader"><h3 class="aj_loader_loading_text"><?php _e('Please Wait','asyncjs'); ?></h3></div></div>
             <table id="aj_step2b_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2b_screenshot aj_gtmetrix_screenshot">
@@ -138,7 +138,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         <td scope="row" align="left">
             <h3><?php _e('Testing: Defer','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method.",'asyncjs');?></p>
-            <div id="aj_step2c_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
+            <div id="aj_step2c_please_wait"><div class="aj_loader"><h3 class="aj_loader_loading_text"><?php _e('Please Wait','asyncjs'); ?></h3></div></div>
             <table id="aj_step2c_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2c_screenshot aj_gtmetrix_screenshot">
@@ -172,7 +172,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         <td scope="row" align="left">
             <h3><?php _e('Testing: Async (jQuery excluded)','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'async' method but excluding jQuery.",'asyncjs');?></p>
-            <div id="aj_step2d_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
+            <div id="aj_step2d_please_wait"><div class="aj_loader"><h3 class="aj_loader_loading_text"><?php _e('Please Wait','asyncjs'); ?></h3></div></div>
             <table id="aj_step2d_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2d_screenshot aj_gtmetrix_screenshot">
@@ -206,7 +206,7 @@ if ( $aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '' ) {
         <td scope="row" align="left">
             <h3><?php _e('Testing: Defer (jQuery excluded)','asyncjs');?></h3>
             <p><?php echo AJ_TITLE; ?> <?php _e("will now query GTmetrix and retrieve your sites PageSpeed and YSlow scores whilst simulating the JavaScript 'defer' method but excluding jQuery.",'asyncjs');?></p>
-            <div id="aj_step2e_please_wait"><div class="aj_loader"><h3>Loading...</h3></div></div>
+            <div id="aj_step2e_please_wait"><div class="aj_loader"><h3 class="aj_loader_loading_text"><?php _e('Please Wait','asyncjs'); ?></h3></div></div>
             <table id="aj_step2e_gtmetrix_results" class="form-table aj-steps-table" width="100%" cellpadding="10">
                 <tr>
                     <td scope="row" align="center"><img src="" class="aj_step2e_screenshot aj_gtmetrix_screenshot">
