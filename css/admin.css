@@ -87,3 +87,47 @@
   background-color: #f5f5dc;
   margin-top: 15px;
 }
+.aj_loader_loading_text {
+  margin: 0;
+  text-align: center;
+}
+.aj_loader {
+  height: 25px;
+  width: 100%;
+  content: "";
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+}
+.aj_loader:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 25px;
+  background-color: #2980b9;
+  animation: aj_loading 3s linear infinite;
+}
+
+@keyframes aj_loading {
+  from {
+    left: -200px;
+    width: 30%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 120%;
+  }
+  to {
+    left: 100%;
+  }
+}
