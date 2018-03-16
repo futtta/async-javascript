@@ -248,7 +248,7 @@ jQuery( document ).ready( function() {
                 var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).chosen().val();
             } else {
                 var aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).val();
-                var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).val();                
+                var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).val();
             }
 
             if ( jQuery( '#aj_autoptimize_enabled' ).is( ':visible' ) ) {

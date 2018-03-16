@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <table class="form-table" width="100%" cellpadding="10">
     <tr>
-        <td scope="row" align="left" style="vertical-align: top !important;">
+        <td>
             <h3><?php _e('Help &amp; Support','asyncjs'); ?></h3>
-            <p style="font-size: 0.7em;"><strong><?php _e('Installed Version: ','asyncjs'); ?></strong><?php echo AJ_VERSION; ?></p>
+            <p><strong><?php _e('Installed Version: ','asyncjs'); ?></strong><?php echo AJ_VERSION; ?></p>
             <p><?php _e('Below are some answers to some frequently asked questions about ','asyncjs'); ?> <?php echo AJ_TITLE; ?></p>
             <hr />
             <h3><?php _e("Which browsers support the 'async' and 'defer' attributes?",'asyncjs'); ?></h3>

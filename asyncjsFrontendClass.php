@@ -3,10 +3,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-/* 
+/*
  * Frontend logic: add script attribute & change Autoptimize JS attrib if applicable
  */
-  
+
 class AsyncJavaScriptFrontend {
     function __construct() {
         add_filter( 'script_loader_tag', array( $this, 'aj_async_js' ), 20, 3 );
@@ -33,9 +33,9 @@ class AsyncJavaScriptFrontend {
     /**
      *  aj_async_js()
      *
-     *  Main frontend function; adds 'async' or 'defer' attribute to '<script>' tasks called 
+     *  Main frontend function; adds 'async' or 'defer' attribute to '<script>' tasks called
      *  via wp_enqueue_script using the 'script_loader_tag' filter
-     * 
+     *
      */
     public function aj_async_js( $tag, $handle, $src ) {
     	if ( isset( $_GET['aj_simulate'] ) ) {
@@ -129,7 +129,7 @@ class AsyncJavaScriptFrontend {
         }
         return $tag;
     }
-    
+
     /**
      *  aj_autoptimize_defer()
      *

@@ -408,7 +408,7 @@ if ( !isset( $_POST['sub_action'] ) ) {
 
 if( is_null( $return ) ) {
     $return = array(
-        'status' => false 
+        'status' => false
     );
 }
 
