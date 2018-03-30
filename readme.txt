@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 2.18.03.15
+Stable tag: 2.18.04.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,9 @@ Async Javascript lets you add 'async' or 'defer' attribute to scripts to exclude
 == Description ==
 Eliminate Render-blocking Javascript in above-the-fold content with Async Javascript.
 
-Render-blocking Javascript prevents above-the-fold content on your page from being rendered until the javascript has finished loading. This can impact on your page speed and ultimately your ranking within search engines. It can also impact your users experience.
+Render-blocking Javascript prevents above-the-fold content on your page from being rendered until the javascript has finished loading. This can impact on your page speed and ultimately your ranking within search engines. It can also impact your user's experience.
 
-Async JavaScript gives you full control of which scripts to add a 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website.
+Async JavaScript gives you full control of which scripts to add an 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website.
 
 == Installation ==
 Installation is very straightforward:
@@ -61,6 +61,17 @@ Coming soon!
 
 == Changelog ==
 
+= 2.18.04.02 =
+
+* Remove all images from the project such as the animated hands and progress bar gif.
+* Remove empty rows that added unnecessary space.
+* Switch buttons to use WordPress button styles
+* Fix broken Dashboard Widget from 18.03.15 and reduce font-size to fix text overflow.
+* remove all CSS !important declarations for easier CSS styling.
+* remove inline CSS styles
+* switch to a CSS based progress bar.
+* Spell check readme
+
 = 2.18.03.15 =
 
 * bugfix: only load asyncjs' JS & CSS on own settings page [as reported by Marat Petrov](https://wordpress.org/support/topic/error-after-update-117/)
@@ -81,7 +92,7 @@ Coming soon!
 
 = 2.17.11.03 =
 
-* MOD: Check for GTMetrix class existance prior to including class
+* MOD: Check for GTMetrix class existence prior to including class
 
 = 2.17.10.18 =
 
@@ -103,11 +114,11 @@ Coming soon!
 
 = 2.17.05.07 =
 
-* FIX: Some installs not saving plugin / theme exclusions due to theme incompatibility
+* FIX: Some installs not saving plugin/theme exclusions due to theme incompatibility
 
 = 2.17.05.06 =
 
-* MOD/FIX: On some WordPress installs is_plugin_active function being called too early. Moved is_plugin_active into dedicated function called via admin_init as per codex: https://codex.wordpress.org/Function_Reference/is_plugin_active
+* MOD/FIX: On some WordPress installs is_plugin_active function being called too early. Moved is_plugin_active into a dedicated function called via admin_init as per codex: https://codex.wordpress.org/Function_Reference/is_plugin_active
 
 = 2.17.05.05 =
 
@@ -115,7 +126,7 @@ Coming soon!
 
 = 2.17.05.04 =
 
-* FIX: Resolve early loading of plugin causing fatal error due to function not available yet
+* FIX: Resolve early loading of plugin causing a fatal error due to function not available yet
 * FIX: CSS / JS not loading
 
 = 2.17.05.03 =
@@ -125,6 +136,6 @@ Coming soon!
 = 2.17.05.01 =
 
 * massive Massive MASSIVE rewrite of Async JavaScript!!!
-* Now includes a setup Wizard, Status page, Settings page and a help page.
+* Now includes a Setup Wizard, Status page, Settings page and a help page.
 * Communicates directly with GTmetrix (account required)
-* Automaticall transfers existing settings from Async JavaScript to Async JavaScript
+* Automatically transfers existing settings from Async JavaScript to Async JavaScript
