@@ -163,7 +163,7 @@ echo $output;
                 <?php
             }
         ?>
-        <p>
-            <button data-id="aj_save_settings" class="aj_steps_button button"><?php _e('Save Settings', 'asyncjs'); ?></button>
-        </p>
 </div>
+<p>
+    <button data-id="aj_save_settings" class="aj_steps_button button"><?php _e('Save Settings', 'asyncjs'); ?></button>
+</p>
