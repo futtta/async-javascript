@@ -186,13 +186,4 @@ if (isset($aj_gtmetrix_results['latest'])) {
     <li><?php _e('GTmetrix Credits Available:', 'asyncjs'); ?> <span class="aj_gtmetrix_credits"><?php echo $credits; ?></span></li>
 </ol>
 </div>
-
-<?php
-echo "<div class=\"asItemDetail\">";
-    echo $this->hints_tips();
-echo "</div>";
-?>
-
-
-
 <?php

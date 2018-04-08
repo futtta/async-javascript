@@ -23,17 +23,9 @@ if ($aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '') {
     $credits = 'N/A';
 }
 ?>
-<table class="form-table" width="100%" cellpadding="10">
-    <tr id="aj_intro">
-        <td>
-        <div class="asItemDetail">
-            <h3><?php echo AJ_TITLE; ?></h3>
-            <?php echo $this->about_aj(); ?>
-        </div>
-        </td>
-    </tr>
+<table class="form-table" style="width:100%;margin-top:0px;">
     <tr id="aj_step1">
-        <td>
+        <td style="padding-top:0px;">
         <div class="asItemDetail">
             <h3><?php _e('Step 1: GTmetrix API Key', 'asyncjs'); ?></h3>
             <p><?php _e('<strong><em>Please Note:</em></strong> You do not have to use this Wizard. All settings can be changed under the', 'asyncjs'); ?> <a href="<?php echo menu_page_url(AJ_ADMIN_MENU_SLUG, false) . '&tab=settings'; ?>"><?php _e('Settings', 'asyncjs'); ?></a> <?php _e('tab.', 'asyncjs'); ?></p>

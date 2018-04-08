@@ -29,15 +29,13 @@ $aj_autoptimize_async = ($aj_autoptimize_method == 'async') ? ' checked="checked
 $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked"' : '';
 ?>
 
-
-
 <div class="asItemDetail">
-        <h3><?php echo AJ_TITLE; ?></h3>
-        <?php echo $this->about_aj(); ?>
+    <h3><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
+    <p>
+        <label><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>? </label>
+        <input type="checkbox" id="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
+    </p>
 </div>
-
-
-
 
 <div class="asItemDetail">
     <h3><?php _e('Quick Settings', 'asyncjs'); ?></h3>
@@ -51,16 +49,6 @@ $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked
     </p>
 </div>
 
-
-
-
-<div class="asItemDetail">
-    <h3><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
-    <p>
-        <label><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>? </label>
-        <input type="checkbox" id="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
-    </p>
-</div>
 <div class="asItemDetail">
     <h3><?php echo AJ_TITLE; ?> Method</h3>
     <p><?php _e('Please select the method (<strong>async</strong> or <strong>defer</strong>) that you wish to enable:', 'asyncjs'); ?></p>

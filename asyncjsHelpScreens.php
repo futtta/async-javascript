@@ -5,6 +5,10 @@ if (! defined('ABSPATH')) {
 ?>
 
 <div class="asItemDetail">
+    <h3><?php echo AJ_TITLE; ?></h3>
+    <?php echo $this->about_aj(); ?>
+</div>
+<div class="asItemDetail">
 <h3><?php _e('Help &amp; Support', 'asyncjs'); ?></h3>
 <p><strong><?php _e('Installed Version: ', 'asyncjs'); ?></strong><?php echo AJ_VERSION; ?></p>
 <p><?php _e('Below are some answers to some frequently asked questions about ', 'asyncjs'); ?> <?php echo AJ_TITLE; ?></p>
@@ -39,4 +43,7 @@ if (! defined('ABSPATH')) {
     <li><?php _e('Disable the plugin', 'asyncjs'); ?></li>
     <li><?php _e('Delete the plugin', 'asyncjs'); ?></li>
 </ul>
+</div>
+<div class="asItemDetail">
+    <?php echo $this->hints_tips(); ?>
 </div>
