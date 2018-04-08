@@ -1,4 +1,3 @@
-// 2018-04-05 15:38:11
 function aj_step( theStep ) {
     var aj_nonce = jQuery( '#aj_nonce' ).val();
     var aj_gtmetrix_username = jQuery( '#aj_gtmetrix_username' ).val();
