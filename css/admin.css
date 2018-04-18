@@ -131,3 +131,9 @@
     left: 100%;
   }
 }
+.asItemDetail {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  margin: 15px 10px 10px 0;
+}

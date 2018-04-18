@@ -3,16 +3,25 @@ function aj_step( theStep ) {
     var aj_gtmetrix_username = jQuery( '#aj_gtmetrix_username' ).val();
     var aj_gtmetrix_api_key = jQuery( '#aj_gtmetrix_api_key' ).val();
     var aj_gtmetrix_server = jQuery( '#aj_gtmetrix_server' ).val();
+    var data = {
+        'action': 'aj_steps',
+        'sub_action': theStep,
+        'site_url': aj_localize_admin.siteurl,
+        'aj_gtmetrix_username': aj_gtmetrix_username,
+        'aj_gtmetrix_api_key': aj_gtmetrix_api_key,
+        'aj_gtmetrix_server': aj_gtmetrix_server,
+        'security': aj_nonce
+    };
     if ( theStep == 'aj_step_results' ) {
-        var data = {
-            'action': 'aj_steps',
-            'sub_action': theStep,
-            'site_url': aj_localize_admin.siteurl,
-            'aj_gtmetrix_username': aj_gtmetrix_username,
-            'aj_gtmetrix_api_key': aj_gtmetrix_api_key,
-            'aj_gtmetrix_server': aj_gtmetrix_server,
-            'security': aj_nonce
-        };
+        // var data = {
+        //     'action': 'aj_steps',
+        //     'sub_action': theStep,
+        //     'site_url': aj_localize_admin.siteurl,
+        //     'aj_gtmetrix_username': aj_gtmetrix_username,
+        //     'aj_gtmetrix_api_key': aj_gtmetrix_api_key,
+        //     'aj_gtmetrix_server': aj_gtmetrix_server,
+        //     'security': aj_nonce
+        // };
         jQuery.post(aj_localize_admin.ajaxurl, data, function( response ) {
             try {
                 response = jQuery.parseJSON( response );
@@ -63,15 +72,15 @@ function aj_step( theStep ) {
             }
         });
     } else {
-        var data = {
-            'action': 'aj_steps',
-            'sub_action': theStep,
-            'site_url': aj_localize_admin.siteurl,
-            'aj_gtmetrix_username': aj_gtmetrix_username,
-            'aj_gtmetrix_api_key': aj_gtmetrix_api_key,
-            'aj_gtmetrix_server': aj_gtmetrix_server,
-            'security': aj_nonce
-        };
+        // var data = {
+        //     'action': 'aj_steps',
+        //     'sub_action': theStep,
+        //     'site_url': aj_localize_admin.siteurl,
+        //     'aj_gtmetrix_username': aj_gtmetrix_username,
+        //     'aj_gtmetrix_api_key': aj_gtmetrix_api_key,
+        //     'aj_gtmetrix_server': aj_gtmetrix_server,
+        //     'security': aj_nonce
+        // };
         jQuery.post(aj_localize_admin.ajaxurl, data, function( response ) {
             try {
                 response = jQuery.parseJSON( response );
@@ -187,14 +196,16 @@ jQuery( document ).ready( function() {
         e.preventDefault();
         var aj_nonce = jQuery( '#aj_nonce' ).val();
         var theStep = jQuery( this ).attr( 'data-id' );
+        var settings = theStep.replace( '_apply', '' );
+        var aj_enabled = 1;
         if ( theStep == 'aj_goto_settings' ) {
             var newURL = aj_localize_admin.ajadminurl + '&tab=settings';
             window.location.href = newURL;
         } else if ( theStep == 'aj_apply_settings' || theStep == 'aj_step2b_apply' || theStep == 'aj_step2c_apply' || theStep == 'aj_step2d_apply' || theStep == 'aj_step2e_apply') {
             if ( theStep != 'aj_apply_settings' ) {
-                var settings = theStep.replace( '_apply', '' );
+                 settings = settings;
             } else {
-                var settings = '';
+                settings = '';
                 jQuery( '#aj_notification' ).fadeIn( 'slow' ).html( 'Settings Saved <span class="aj_dismiss"><a title="dismiss this notification">x</a></span>' );
             }
             var data = {
@@ -233,37 +244,41 @@ jQuery( document ).ready( function() {
             });
         } else if ( theStep == 'aj_save_settings' ) {
             if ( jQuery( '#aj_enabled' ).is( ':checked' ) ) {
-                var aj_enabled = 1;
+                aj_enabled = 1;
             } else {
-                var aj_enabled = 0;
+                aj_enabled = 0;
             }
             var aj_method = jQuery( 'input[type=radio][name=aj_method]:checked' ).val();
             var aj_jquery = jQuery( 'input[type=radio][name=aj_jquery]:checked' ).val();
             var aj_async = jQuery( '#aj_async' ).val();
             var aj_defer = jQuery( '#aj_defer' ).val();
             var aj_exclusions = jQuery( '#aj_exclusions' ).val();
+            var aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).chosen().val();
+            var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).chosen().val();
+            var aj_autoptimize_enabled = 1;
+            var aj_autoptimize_method = jQuery( 'input[type=radio][name=aj_autoptimize_method]:checked' ).val();
 
             if ( typeof jQuery( '.aj_chosen' ).chosen === "function" ) {
-                var aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).chosen().val();
-                var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).chosen().val();
+                 aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).chosen().val();
+                 aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).chosen().val();
             } else {
-                var aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).val();
-                var aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).val();
+                 aj_plugin_exclusions = jQuery( '#aj_plugin_exclusions' ).val();
+                 aj_theme_exclusions = jQuery( '#aj_theme_exclusions' ).val();
             }
 
             if ( jQuery( '#aj_autoptimize_enabled' ).is( ':visible' ) ) {
                 if ( jQuery( '#aj_autoptimize_enabled' ).is( ':checked' ) ) {
-                    var aj_autoptimize_enabled = 1;
-                    var aj_autoptimize_method = jQuery( 'input[type=radio][name=aj_autoptimize_method]:checked' ).val();
+                     aj_autoptimize_enabled = 1;
+                     aj_autoptimize_method = jQuery( 'input[type=radio][name=aj_autoptimize_method]:checked' ).val();
                 } else {
-                    var aj_autoptimize_enabled = 0;
-                    var aj_autoptimize_method = jQuery( 'input[type=radio][name=aj_autoptimize_method]:checked' ).val();
+                     aj_autoptimize_enabled = 0;
+                     aj_autoptimize_method = jQuery( 'input[type=radio][name=aj_autoptimize_method]:checked' ).val();
                 }
             } else {
-                var aj_autoptimize_enabled = 0;
-                var aj_autoptimize_method = 'async';
+                 aj_autoptimize_enabled = 0;
+                 aj_autoptimize_method = 'async';
             }
-            var data = {
+            var dataSteps = {
                 'action': 'aj_steps',
                 'sub_action': 'aj_save_settings',
                 'aj_enabled': aj_enabled,
@@ -278,7 +293,7 @@ jQuery( document ).ready( function() {
                 'aj_autoptimize_method': aj_autoptimize_method,
                 'security': aj_nonce
             };
-            jQuery.post(aj_localize_admin.ajaxurl, data, function( response ) {
+            jQuery.post(aj_localize_admin.ajaxurl, dataSteps, function( response ) {
                 try {
                     response = jQuery.parseJSON( response );
                     if ( response.status !== false ) {
