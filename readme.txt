@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 3.18.04.23
+Stable tag: 2.18.04.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,9 +61,9 @@ Coming soon!
 
 == Changelog ==
 
-= 3.18.04.23 =
+= 2.18.04.23 =
 
-* While a major release internally, no functionality should be affected as this was primarily a major code cleanup.
+* While continued refactoring of backend code internally, no functionality should be affected.
 * Remove all images from the project such as the animated hands and progress bar gif.
 * Remove empty rows that added unnecessary space.
 * Switch buttons to use WordPress button styles.
