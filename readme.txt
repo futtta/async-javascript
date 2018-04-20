@@ -1,10 +1,10 @@
 === Async JavaScript ===
-Contributors: (cloughit), optimizingmatters, futtta
+Contributors: (cloughit), optimizingmatters, futtta, wormeyman
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 2.18.04.02
+Stable tag: 3.18.04.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,16 +61,20 @@ Coming soon!
 
 == Changelog ==
 
-= 2.18.04.02 =
+= 3.18.04.23 =
 
+* While a major release internally, no functionality should be affected as this was primarily a major code cleanup.
 * Remove all images from the project such as the animated hands and progress bar gif.
 * Remove empty rows that added unnecessary space.
-* Switch buttons to use WordPress button styles
+* Switch buttons to use WordPress button styles.
 * Fix broken Dashboard Widget from 18.03.15 and reduce font-size to fix text overflow.
 * remove all CSS !important declarations for easier CSS styling.
-* remove inline CSS styles
+* remove inline CSS styles.
 * switch to a CSS based progress bar.
-* Spell check readme
+* Spell check readme.
+* Remove almost all tables from files.
+* Refactor JavaScript.
+* Add wormeyman as a contributor.
 
 = 2.18.03.15 =
 
