@@ -63,7 +63,7 @@ Coming soon!
 
 = 2.18.04.23 =
 
-* Re-arrange content on the different tabs.
+* Re-arrange content on the different tabs of the settings page.
 * Continued refactoring of backend code, no functionality should be affected.
 * Remove all images from the project such as the animated hands and progress bar gif.
 * Remove empty rows that added unnecessary space.
