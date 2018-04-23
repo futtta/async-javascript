@@ -63,19 +63,19 @@ Coming soon!
 
 = 2.18.04.23 =
 
-* While continued refactoring of backend code internally, no functionality should be affected.
 * Re-arrange content on the different tabs.
+* Continued refactoring of backend code, no functionality should be affected.
 * Remove all images from the project such as the animated hands and progress bar gif.
 * Remove empty rows that added unnecessary space.
 * Switch buttons to use WordPress button styles.
 * Fix broken Dashboard Widget from 2.18.03.15 and reduce font-size to fix text overflow.
-* remove all CSS !important declarations for easier CSS styling.
-* remove inline CSS styles.
-* switch to a CSS based progress bar.
+* Remove all CSS !important declarations for easier CSS styling.
+* Remove inline CSS styles.
+* Switch to a CSS based progress bar.
 * Spell check readme.
 * Remove almost all tables from files.
 * Refactor JavaScript.
-* Add wormeyman as a contributor.
+* Add wormeyman as a contributor (thanks man!).
 
 = 2.18.03.15 =
 
