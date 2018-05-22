@@ -65,7 +65,7 @@ class AsyncJavaScriptFrontend {
             $aj_plugin_exclusions = get_option( 'aj_plugin_exclusions', array() );
             $aj_theme_exclusions = get_option( 'aj_theme_exclusions', array() );
         }
-        if ( false !== $aj_enabled && false === is_admin() && false === $this->aj_is_amp() ) {
+        if ( false !== $aj_enabled && false === is_admin() && false === $this->aj_is_amp() && false === $this->aj_noptimize() ) {
             if ( is_array( $aj_plugin_exclusions ) && !empty( $aj_plugin_exclusions ) ) {
                 foreach ( $aj_plugin_exclusions as $aj_plugin_exclusion ) {
                 	$aj_plugin_exclusion = trim( $aj_plugin_exclusion );
@@ -151,10 +151,7 @@ class AsyncJavaScriptFrontend {
     }
     
     /**
-     * Returns true if given $content is considered to be AMP markup.
-     * This is far from actual validation against AMP spec, but it'll do for now.
-     *
-     * @param string $content Markup to check.
+     * Returns true if given current page is AMP.
      *
      * @return bool
      */
@@ -167,4 +164,18 @@ class AsyncJavaScriptFrontend {
         }
     }
 
+    /**
+     * Returns true if aj_noptimize=1 was found in URL.
+     *
+     * @return bool
+     */
+    public static function aj_noptimize()
+    {
+        $key = 'aj_noptimize';
+        if ( array_key_exists( $key, $_GET ) && '1' === $_GET[ $key ] ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
