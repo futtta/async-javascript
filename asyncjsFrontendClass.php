@@ -65,7 +65,7 @@ class AsyncJavaScriptFrontend {
             $aj_plugin_exclusions = get_option( 'aj_plugin_exclusions', array() );
             $aj_theme_exclusions = get_option( 'aj_theme_exclusions', array() );
         }
-        if ( false !== $aj_enabled && false === is_admin() ) {
+        if ( false !== $aj_enabled && false === is_admin() && false === $this->aj_is_amp() ) {
             if ( is_array( $aj_plugin_exclusions ) && !empty( $aj_plugin_exclusions ) ) {
                 foreach ( $aj_plugin_exclusions as $aj_plugin_exclusion ) {
                 	$aj_plugin_exclusion = trim( $aj_plugin_exclusion );
@@ -149,4 +149,22 @@ class AsyncJavaScriptFrontend {
 	    }
         return '';
     }
+    
+    /**
+     * Returns true if given $content is considered to be AMP markup.
+     * This is far from actual validation against AMP spec, but it'll do for now.
+     *
+     * @param string $content Markup to check.
+     *
+     * @return bool
+     */
+    public static function aj_is_amp()
+    {
+        if ( !function_exists('is_amp_endpoint') || !is_amp_endpoint() ) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }
