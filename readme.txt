@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 4.9
-Stable tag: 2.18.04.23
+Stable tag: 2.18.05.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,11 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 Coming soon!
 
 == Changelog ==
+
+= 2.18.05.24 =
+
+* don't async (or defer) on AMP-pages
+* disable async/ defer by when `?aj_noptimize=1` is part of  the URL
 
 = 2.18.04.23 =
 
