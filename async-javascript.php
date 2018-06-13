@@ -3,7 +3,7 @@
  * Plugin Name: Async JavaScript
  * Plugin URI: https://autoptimize.com/
  * Description: Async JavaScript gives you full control of which scripts to add a 'async' or 'defer' attribute to or to exclude to help increase the performance of your WordPress website
- * Version: 2.18.05.24
+ * Version: 2.18.06.13
  * Author: Frank Goossens (futtta)
  * Author URI: https://autoptimize.com/
  * Text Domain: asyncjs
