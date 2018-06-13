@@ -147,7 +147,7 @@ class AsyncJavaScriptFrontend {
 	            return " " . $aj_autoptimize_method . "='" . $aj_autoptimize_method . "' ";
 	        }
 	    }
-        return '';
+        return $defer;
     }
     
     /**

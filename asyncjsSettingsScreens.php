@@ -146,7 +146,7 @@ echo $output;
     <p><?php _e('If you have any active themes / plugins that <?php echo AJ_TITLE; ?> supports then these will be listed below.', 'asyncjs'); ?></p>
     <p><?php _e('If you think you have found a plugin that <?php echo AJ_TITLE; ?> may be able to provide support for please lodge a ticket at <a href="https://wordpress.org/support/plugin/async-javascript" target="_blank">https://wordpress.org/support/plugin/async-javascript</a>', 'asyncjs'); ?></p>
         <?php
-        if (is_plugin_active('autoptimize/autoptimize.php')) {
+        if (is_plugin_active('autoptimize/autoptimize.php') || is_plugin_active('autoptimize-beta/autoptimize.php')) {
                 ?>
                 <div class="aj_plugin">
                         <h4><?php _e('Plugin: Autoptimize', 'asyncjs'); ?></h4>
