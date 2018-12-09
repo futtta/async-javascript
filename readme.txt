@@ -3,7 +3,7 @@ Contributors: (cloughit), optimizingmatters, futtta, wormeyman
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: 2.18.06.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -55,11 +55,16 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 * Disable the plugin
 * Delete the plugin
 
-== Screenshots ==
-
-Coming soon!
-
 == Changelog ==
+
+= 2.18.12.10 =
+
+* the "happy birthday to me" edition ;-)
+* new: added option to disable Async JS for logged in users
+* new: added option to disable Async JS on shop cart/ checkout pages (woocommerce, edd & wp ecommerce)
+* added 'settings'-link to plugin overview screen
+* updated choosen JS library to 1.8.7
+* confirmed working with WordPress 5.0
 
 = 2.18.06.13 =
 
