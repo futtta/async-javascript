@@ -288,6 +288,16 @@ jQuery(document).ready(function() {
       } else {
         aj_enabled = 0;
       }
+      if (jQuery("#aj_enabled_logged").is(":checked")) {
+        aj_enabled_logged = 1;
+      } else {
+        aj_enabled_logged = 0;
+      }
+      if (jQuery("#aj_enabled_shop").is(":checked")) {
+        aj_enabled_shop = 1;
+      } else {
+        aj_enabled_shop = 0;
+      }
       var aj_method = jQuery("input[type=radio][name=aj_method]:checked").val();
       var aj_jquery = jQuery("input[type=radio][name=aj_jquery]:checked").val();
       var aj_async = jQuery("#aj_async").val();
@@ -330,6 +340,8 @@ jQuery(document).ready(function() {
         action: "aj_steps",
         sub_action: "aj_save_settings",
         aj_enabled: aj_enabled,
+        aj_enabled_logged: aj_enabled_logged,
+        aj_enabled_shop: aj_enabled_shop,
         aj_method: aj_method,
         aj_jquery: aj_jquery,
         aj_async: aj_async,

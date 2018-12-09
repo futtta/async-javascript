@@ -9,6 +9,10 @@ $aj_gtmetrix_api_key = get_option('aj_gtmetrix_api_key', '');
 $aj_gtmetrix_server = get_option('aj_gtmetrix_server', '');
 $aj_enabled = get_option('aj_enabled', 0);
 $aj_enabled_checked = ($aj_enabled == 1) ? ' checked="checked"' : '';
+$aj_enabled_logged = get_option('aj_enabled_logged', 0);
+$aj_enabled_logged_checked = ($aj_enabled_logged == 1) ? ' checked="checked"' : '';
+$aj_enabled_shop = get_option('aj_enabled_shop', 0);
+$aj_enabled_shop_checked = ($aj_enabled_shop == 1) ? ' checked="checked"' : '';
 $aj_method = get_option('aj_method', 'async');
 $aj_method_async = ($aj_method == 'async') ? ' checked="checked"' : '';
 $aj_method_defer = ($aj_method == 'defer') ? ' checked="checked"' : '';
@@ -33,7 +37,15 @@ $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked
     <h3><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
     <p>
         <label><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>? </label>
-        <input type="checkbox" id="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
+        <input type="checkbox" name="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
+    </p>
+    <p>
+        <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('for logged in users','asyncjs'); ?>? </label>
+        <input type="checkbox" name="aj_enabled_logged" id="aj_enabled_logged" value="1" <?php echo $aj_enabled_logged_checked; ?> />
+    </p>
+    <p>
+        <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('on cart/ checkout pages','asyncjs'); ?>? </label>
+        <input type="checkbox" name="aj_enabled_shop" id="aj_enabled_shop" value="1" <?php echo $aj_enabled_shop_checked; ?> />
     </p>
 </div>
 
@@ -59,7 +71,7 @@ $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked
     <p><?php _e('Often if jQuery is loaded with <strong>async</strong> or <strong>defer</strong> it can break some jQuery functions, specifically inline scripts which require jQuery to be loaded before the scripts are run.  <strong><em>Sometimes</em></strong> choosing a different method (<strong>async</strong> or <strong>defer</strong>) will work, otherwise it may be necessary to exclude jQuery from having <strong>async</strong> or <strong>defer</strong> applied.', 'asyncjs'); ?></p>
     <p>
         <label><?php _e('jQuery Method: ', 'asyncjs'); ?></label>
-        <input type="radio" name="aj_jquery" value="async" <?php echo $aj_jquery_async; ?> /> Async <input type="radio" name="aj_jquery" value="defer" <?php echo $aj_jquery_defer; ?> /> Defer <input type="radio" name="aj_jquery" value="exclude" <?php echo $aj_jquery_exclude; ?> /> <?php _e('Exclude', 'asyncjs'); ?>
+        <input type="radio" id="aj_jquery" name="aj_jquery" value="async" <?php echo $aj_jquery_async; ?> /> Async <input type="radio" name="aj_jquery" value="defer" <?php echo $aj_jquery_defer; ?> /> Defer <input type="radio" name="aj_jquery" value="exclude" <?php echo $aj_jquery_exclude; ?> /> <?php _e('Exclude', 'asyncjs'); ?>
     </p>
 </div>
     <div class="asItemDetail">

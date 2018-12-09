@@ -382,6 +382,8 @@ if ( !isset( $_POST['sub_action'] ) ) {
             break;
         case 'aj_save_settings':
             $aj_enabled = sanitize_text_field( $_POST['aj_enabled'] );
+            $aj_enabled_logged = sanitize_text_field( $_POST['aj_enabled_logged'] );
+            $aj_enabled_shop = sanitize_text_field( $_POST['aj_enabled_shop'] );
             $aj_method = sanitize_text_field( $_POST['aj_method'] );
             $aj_jquery = sanitize_text_field( $_POST['aj_jquery'] );
             $aj_async = sanitize_text_field( $_POST['aj_async'] );
@@ -392,6 +394,8 @@ if ( !isset( $_POST['sub_action'] ) ) {
             $aj_autoptimize_enabled = sanitize_text_field( $_POST['aj_autoptimize_enabled'] );
             $aj_autoptimize_method = sanitize_text_field( $_POST['aj_autoptimize_method'] );
             update_option( 'aj_enabled', $aj_enabled );
+            update_option( 'aj_enabled_logged', $aj_enabled_logged );
+            update_option( 'aj_enabled_shop', $aj_enabled_shop );
             update_option( 'aj_method', $aj_method );
             update_option( 'aj_jquery', $aj_jquery );
             update_option( 'aj_async', $aj_async );

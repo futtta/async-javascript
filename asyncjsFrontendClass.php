@@ -65,7 +65,7 @@ class AsyncJavaScriptFrontend {
             $aj_plugin_exclusions = get_option( 'aj_plugin_exclusions', array() );
             $aj_theme_exclusions = get_option( 'aj_theme_exclusions', array() );
         }
-        if ( false !== $aj_enabled && false === is_admin() && false === $this->aj_is_amp() && false === $this->aj_noptimize() ) {
+        if ( false !== $aj_enabled && false !== $this->aj_shop() && false !== $this->aj_logged() && false === is_admin() && false === $this->aj_is_amp() && false === $this->aj_noptimize() ) {
             if ( is_array( $aj_plugin_exclusions ) && !empty( $aj_plugin_exclusions ) ) {
                 foreach ( $aj_plugin_exclusions as $aj_plugin_exclusion ) {
                 	$aj_plugin_exclusion = trim( $aj_plugin_exclusion );
@@ -177,5 +177,57 @@ class AsyncJavaScriptFrontend {
         } else {
             return false;
         }
+    }
+
+    /**
+     * Returns false if user is logged on and option was set to
+     * not async for logged on users, return true otherwise.
+     *
+     * @return bool
+     */
+    public static function aj_logged()
+    {
+        static $_do_logged = null;
+
+        if ( is_null( $_do_logged ) ) {
+            $aj_enabled_logged = get_option( 'aj_enabled_logged', 0 );
+            if ( $aj_enabled_logged == 1 ) {
+                $_do_logged = true;
+            } else if ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) {
+                $_do_logged = false;
+            } else {
+                $_do_logged = true;
+            }
+        }
+
+        return $_do_logged;
+    }
+
+    /**
+     * Returns false if user is on shop checkout/ cart page
+     * and option to async shop was not set, return true otherwise.
+     *
+     * @return bool
+     */
+
+    public static function aj_shop()
+    {
+        static $_do_shop = null;
+
+        if ( is_null( $_do_shop ) ) {
+            $aj_enabled_shop = get_option( 'aj_enabled_shop', 0 );
+            $_do_shop = true;
+            if ( $aj_enabled_shop != 1 ) {
+                // Checking for woocommerce, easy digital downloads and wp ecommerce...
+                foreach ( array( 'is_checkout', 'is_cart', 'edd_is_checkout', 'wpsc_is_cart', 'wpsc_is_checkout' ) as $func ) {
+                    if ( function_exists( $func ) && $func() ) {
+                        $_do_shop = false;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return $_do_shop;
     }
 }
