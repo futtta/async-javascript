@@ -19,6 +19,7 @@ class AsyncJavaScriptBackend {
         define( 'AJ_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
         define( 'AJ_VERSION', '3.18.04.23' );
         define( 'AJ_UA', 'Async JavaScript/' . AJ_VERSION . ' (+https://autoptimize.com/)' );
+        add_filter( 'plugin_row_meta', array( $this, 'setmeta' ), 10, 2 );
         add_action( 'plugins_loaded', array( $this, 'aj_admin_init' ) );
         add_action( 'admin_init', array( $this, 'aj_disable_pro' ) );
     }
@@ -346,5 +347,26 @@ class AsyncJavaScriptBackend {
      */
     public function aj_steps() {
         require_once('asyncjsAllAjax.php');
+    }
+
+    /*
+     * setmeta function as in Autoptimize to add settings link on plugin overview page 
+     */
+    public function setmeta($links, $file = null)
+    {
+        // Inspired on http://wpengineer.com/meta-links-for-wordpress-plugins/.
+        // Do it only once - saves time.
+        static $plugin;
+        if ( empty( $plugin ) ) {
+            $plugin = plugin_basename( AJ_PLUGIN_DIR . 'async-javascript.php' );
+        }
+
+        // If it's us, add the link.
+        if ( $file === $plugin ) {
+            $newlink = array( sprintf( '<a href="options-general.php?page=async-javascript">%s</a>', __( 'Settings' ) ) );
+            $links = array_merge( $links, $newlink );
+        }
+
+        return $links;
     }
 }
