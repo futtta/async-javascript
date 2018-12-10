@@ -154,9 +154,9 @@ echo $output;
 <div class="asItemDetail">
     <h3><?php echo AJ_TITLE; ?> <?php _e('For Plugins', 'asyncjs'); ?></h3>
     <p><?php _e('Although not recommended, some themes / plugins can load JavaScript files without using the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function.  In some cases this is necessary for the functionality of the theme / plugin.', 'asyncjs'); ?></p>
-    <p><?php _e('If these themes / plugins provide a hook that can be used to manipulate how the JavaScript file is loaded then <?php echo AJ_TITLE; ?> may be able to provide support for these themes / plugins.', 'asyncjs'); ?></p>
-    <p><?php _e('If you have any active themes / plugins that <?php echo AJ_TITLE; ?> supports then these will be listed below.', 'asyncjs'); ?></p>
-    <p><?php _e('If you think you have found a plugin that <?php echo AJ_TITLE; ?> may be able to provide support for please lodge a ticket at <a href="https://wordpress.org/support/plugin/async-javascript" target="_blank">https://wordpress.org/support/plugin/async-javascript</a>', 'asyncjs'); ?></p>
+    <p><?php _e('If these themes / plugins provide a hook that can be used to manipulate how the JavaScript file is loaded then Async Javascript may be able to provide support for these themes / plugins.', 'asyncjs'); ?></p>
+    <p><?php _e('If you have any active themes / plugins that Async Javascript supports then these will be listed below.', 'asyncjs'); ?></p>
+    <p><?php _e('If you think you have found a plugin that Async Javascript may be able to provide support for please lodge a ticket at <a href="https://wordpress.org/support/plugin/async-javascript" target="_blank">https://wordpress.org/support/plugin/async-javascript</a>', 'asyncjs'); ?></p>
         <?php
         if (is_plugin_active('autoptimize/autoptimize.php') || is_plugin_active('autoptimize-beta/autoptimize.php')) {
                 ?>
