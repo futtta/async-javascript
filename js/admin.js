@@ -1,9 +1,7 @@
 /* globals aj_localize_admin,jQuery */
 /* eslint no-console: 1 */
 // updated:
-// 2018-04-18 15:42:09
-// add notify settings in its own global function
-// so that it can easily be Modified and changed.
+// 2018-12-10 15:42:09
 function notifySettingsSaved() {
   jQuery("#aj_notification").
     fadeIn("slow").
@@ -207,22 +205,13 @@ jQuery(document).ready(function() {
     jQuery(".aj_chosen").chosen();
   }
 
-  // jQuery(document).on(
-  // "click",
-  // ".aj-upgrade-notice .notice-dismiss",
-  // function() {
-  // var aj_nonce = jQuery("#aj_nonce").val();
-  // var notice_id = jQuery(".aj-upgrade-notice").attr("data-id");
-  // jQuery.ajax({
-  // url: aj.ajaxurl,
-  // data: {
-  // action: "async_javascript_dismiss_upgrade",
-  // notice_id: notice_id,
-  // security: aj_nonce
-  // }
-  // });
-  // }
-  // );
+  jQuery( "#aj_enabled" ).change(function() {
+    if (this.checked) {
+      jQuery(".aj_enabled_sub").show("slow");
+    } else {
+      jQuery(".aj_enabled_sub:visible").hide("slow");;
+    }
+  });
 
   jQuery(document).on("click", ".aj_steps_button", function(e) {
     e.preventDefault();

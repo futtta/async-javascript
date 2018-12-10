@@ -39,11 +39,11 @@ $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked
         <label><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>? </label>
         <input type="checkbox" name="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
     </p>
-    <p>
+    <p class='aj_enabled_sub <?php if ( ! $aj_enabled_checked ) { echo " hidden"; } ?>'>
         <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('for logged in users','asyncjs'); ?>? </label>
         <input type="checkbox" name="aj_enabled_logged" id="aj_enabled_logged" value="1" <?php echo $aj_enabled_logged_checked; ?> />
     </p>
-    <p>
+    <p class='aj_enabled_sub <?php if ( ! $aj_enabled_checked ) { echo " hidden"; } ?>'>
         <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('on cart/ checkout pages','asyncjs'); ?>? </label>
         <input type="checkbox" name="aj_enabled_shop" id="aj_enabled_shop" value="1" <?php echo $aj_enabled_shop_checked; ?> />
     </p>
