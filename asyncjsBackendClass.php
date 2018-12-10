@@ -361,7 +361,7 @@ class AsyncJavaScriptBackend {
         // If it's us, add the link.
         if ( $file === $plugin ) {
             $newlink = array( sprintf( '<a href="options-general.php?page=async-javascript">%s</a>', __( 'Settings' ) ) );
-            $links = array_merge( $links, $newlink );
+            $links = array_merge( $newlink, $links );
         }
 
         return $links;
