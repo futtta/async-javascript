@@ -65,7 +65,7 @@ class AsyncJavaScriptBackend {
      *
      */
     public static function aj_uninstall() {
-        $optionsToRemove = array('aj_async','aj_autoptimize_enabled','aj_autoptimize_method','aj_defer','aj_enabled','aj_exclusions','aj_gtmetrix_api_key','aj_gtmetrix_results','aj_gtmetrix_server','aj_gtmetrix_username','aj_jquery','aj_method','aj_plugin_exclusions','aj_theme_exclusions','aj_version');
+        $optionsToRemove = array('aj_async','aj_autoptimize_enabled','aj_autoptimize_method','aj_defer','aj_enabled','aj_enabled_logged','aj_enabled_shop','aj_exclusions','aj_gtmetrix_api_key','aj_gtmetrix_results','aj_gtmetrix_server','aj_gtmetrix_username','aj_jquery','aj_method','aj_plugin_exclusions','aj_theme_exclusions','aj_version');
         if ( !is_multisite() ) {
             foreach ($delete_options as $del_opt) { delete_option( $del_opt ); }
         } else {
