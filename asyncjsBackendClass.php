@@ -17,7 +17,7 @@ class AsyncJavaScriptBackend {
         define( 'AJ_ADMIN_URL', trailingslashit( admin_url() ) );
         define( 'AJ_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
         define( 'AJ_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-        define( 'AJ_VERSION', '3.18.04.23' );
+        define( 'AJ_VERSION', '2.18.12.10' );
         define( 'AJ_UA', 'Async JavaScript/' . AJ_VERSION . ' (+https://autoptimize.com/)' );
         add_filter( 'plugin_row_meta', array( $this, 'setmeta' ), 10, 2 );
         add_action( 'plugins_loaded', array( $this, 'aj_admin_init' ) );
@@ -134,27 +134,24 @@ class AsyncJavaScriptBackend {
 
         // check if upgrading from early release so settings can be transferred
         $aj_version = get_option( 'aj_version', '' );
-        if ( $aj_version == '' || $aj_version < '2017.04.25' ) {
-            $aj_enabled = get_option( 'aj_enabled', 0 );
-            $aj_method = get_option( 'aj_method', 'async' );
-            $aj_jquery = ( get_option( 'aj_jquery', 'async' ) == 'same' ) ? $aj_method : get_option( 'aj_jquery', 'async' );
-            $aj_async = get_option( 'aj_async', '' );
-            $aj_defer = get_option( 'aj_defer', '' );
-            $aj_exclusions = get_option( 'aj_exclusions', '' );
-            $aj_plugin_exclusions = ( is_array( get_option( 'aj_plugin_exclusions', array() ) ) && !is_null( get_option( 'aj_plugin_exclusions', array() ) ) ? get_option( 'aj_plugin_exclusions', array() ) : explode( ',', get_option( 'aj_plugin_exclusions', '' ) ) );
-            $aj_theme_exclusions = ( is_array( get_option( 'aj_theme_exclusions', array() ) ) && !is_null( get_option( 'aj_theme_exclusions', array() ) ) ? get_option( 'aj_theme_exclusions', array() ) : explode( ',', get_option( 'aj_theme_exclusions', '' ) ) );
-            $aj_autoptimize_enabled = get_option( 'aj_autoptimize_enabled', 0 );
-            $aj_autoptimize_method = get_option( 'aj_autoptimize_method', 'async' );
-            update_option( 'aj_enabled', $aj_enabled );
-            update_option( 'aj_method', $aj_method );
-            update_option( 'aj_jquery', $aj_jquery );
-            update_option( 'aj_async', $aj_async );
-            update_option( 'aj_defer', $aj_defer );
-            update_option( 'aj_exclusions', $aj_exclusions );
-            update_option( 'aj_plugin_exclusions', $aj_plugin_exclusions );
-            update_option( 'aj_theme_exclusions', $aj_theme_exclusions );
-            update_option( 'aj_autoptimize_enabled', $aj_autoptimize_enabled );
-            update_option( 'aj_autoptimize_method', $aj_autoptimize_method );
+        if ( $aj_version == '' ) {
+            // set default values
+            update_option( 'aj_enabled', 0 );
+            update_option( 'aj_method', 'async' );
+            update_option( 'aj_enabled_logged', 0 );
+            update_option( 'aj_enabled_shop', 0 );
+            update_option( 'aj_jquery', 'exclude' );
+            update_option( 'aj_async', '' );
+            update_option( 'aj_defer', '' );
+            update_option( 'aj_exclusions', '' );
+            update_option( 'aj_plugin_exclusions', '' );
+            update_option( 'aj_theme_exclusions', '' );
+            update_option( 'aj_autoptimize_enabled', 0 );
+            update_option( 'aj_autoptimize_method', 'async' );
+        } else if ( $aj_version < '2.18.12.10' || $aj_version == '3.18.04.23' ) {
+            // upgrade from 2.18.06.13, enable aj for logged users & checkout/ cart to ensure non-regression
+            update_option( 'aj_enabled_logged', 1 );
+            update_option( 'aj_enabled_shop', 1 );
         }
 
         if ( $aj_version != AJ_VERSION ) {
