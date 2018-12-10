@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 5.0
-Stable tag: 2.18.06.13
+Stable tag: 2.18.12.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
