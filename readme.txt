@@ -62,8 +62,8 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 * the "happy birthday to me" edition ;-)
 * new: added option to disable Async JS for logged in users
 * new: added option to disable Async JS on shop cart/ checkout pages (woocommerce, edd & wp ecommerce)
-* added 'settings'-link to plugin overview screen
-* updated choosen JS library to 1.8.7
+* added 'settings'-link to plugin overview screen (hi Mike!)
+* updated the [chosen JS library](https://harvesthq.github.io/chosen/) to 1.8.7
 * confirmed working with WordPress 5.0
 
 = 2.18.06.13 =
