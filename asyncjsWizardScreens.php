@@ -257,8 +257,6 @@ if ($aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '') {
     <tr>
         <td colspan="6"><?php _e('Simulate', 'asyncjs');?> <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a>
     </tr>
-    <tr><td scope="row" align="left" colspan="6"><?php _e('See full report:', 'asyncjs');?> <span class="aj_step2e_report"></span></td></tr>
-    <tr><td scope="row" align="left" colspan="6"><?php _e('Simulate', 'asyncjs');?> <span class="aj_step2e_gtmetrix"></span>: <a href="" class="aj_step2e_url" target="_blank"></a></tr>
 </table>
 </div>
 
