@@ -173,10 +173,12 @@ class AsyncJavaScriptFrontend {
     {
         $key = 'aj_noptimize';
         if ( array_key_exists( $key, $_GET ) && '1' === $_GET[ $key ] ) {
-            return true;
+            $aj_noptimize = true;
         } else {
-            return false;
+            $aj_noptimize = false;
         }
+        $aj_noptimize = (bool) apply_filters( 'asyncjs_filter_noptimize', $aj_noptimize );
+        return $aj_noptimize;
     }
 
     /**
