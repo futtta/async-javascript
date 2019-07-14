@@ -19,37 +19,37 @@ $aj_autoptimize_enabled = ( get_option( 'aj_autoptimize_enabled', 0 ) == 1 ) ? '
 $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'async' ) ? 'Async' : 'Defer';
 ?>
 <div class="wrap aj">
-    <h3><?php echo AJ_TITLE.__(' Status','asyncjs'); ?></h3>
+    <h3><?php echo AJ_TITLE.__(' Status','async-javascript'); ?></h3>
     <ul>
-        <li><strong><?php _e(' Status','asyncjs'); ?></strong> <?php echo $aj_enabled; ?></li>
+        <li><strong><?php _e(' Status','async-javascript'); ?></strong> <?php echo $aj_enabled; ?></li>
         <?php
         if ( $aj_enabled == 'Enabled' ) {
             ?>
-            <li><strong><?php _e('Method:','asyncjs'); ?></strong> <?php echo $aj_method; ?></li>
+            <li><strong><?php _e('Method:','async-javascript'); ?></strong> <?php echo $aj_method; ?></li>
             <li><strong>jQuery:</strong> <?php echo $aj_jquery; ?></li>
-            <li><strong><?php _e('Exclusions:','asyncjs'); ?></strong> <?php echo $aj_exclusions; ?></li>
-            <li><strong><?php _e('Plugin Exclusions:','asyncjs'); ?></strong> <?php echo ( is_array( $aj_plugin_exclusions ) ) ? implode( ',', $aj_plugin_exclusions) : $aj_plugin_exclusions; ?></li>
-            <li><strong><?php _e('Theme Exclusions:','asyncjs'); ?></strong> <?php echo ( is_array( $aj_theme_exclusions ) ) ? implode( ',', $aj_theme_exclusions) : $aj_theme_exclusions; ?></li>
+            <li><strong><?php _e('Exclusions:','async-javascript'); ?></strong> <?php echo $aj_exclusions; ?></li>
+            <li><strong><?php _e('Plugin Exclusions:','async-javascript'); ?></strong> <?php echo ( is_array( $aj_plugin_exclusions ) ) ? implode( ',', $aj_plugin_exclusions) : $aj_plugin_exclusions; ?></li>
+            <li><strong><?php _e('Theme Exclusions:','async-javascript'); ?></strong> <?php echo ( is_array( $aj_theme_exclusions ) ) ? implode( ',', $aj_theme_exclusions) : $aj_theme_exclusions; ?></li>
             <?php
             if ( is_plugin_active( 'autoptimize/autoptimize.php' ) ) {
                 ?>
-                <li><strong><?php _e('Autoptimize Status:','asyncjs'); ?></strong> <?php echo $aj_autoptimize_enabled; ?></li>
+                <li><strong><?php _e('Autoptimize Status:','async-javascript'); ?></strong> <?php echo $aj_autoptimize_enabled; ?></li>
                 <?php
                 if ( $aj_autoptimize_enabled == 'Enabled' ) {
                     ?>
-                    <li><strong><?php _e('Autoptimize Method:','asyncjs'); ?></strong> <?php echo $aj_autoptimize_method; ?></li>
+                    <li><strong><?php _e('Autoptimize Method:','async-javascript'); ?></strong> <?php echo $aj_autoptimize_method; ?></li>
                     <?php
                 }
             } else {
                 ?>
-                <li><?php _e('Autoptimize not installed or activated.','asyncjs'); ?></li>
+                <li><?php _e('Autoptimize not installed or activated.','async-javascript'); ?></li>
                 <?php
             }
         }
         ?>
     </ul>
     <hr />
-    <h3><?php _e('Latest GTmetrix Results','asyncjs'); ?></h3>
+    <h3><?php _e('Latest GTmetrix Results','async-javascript'); ?></h3>
     <?php
     $aj_gtmetrix_results = get_option( 'aj_gtmetrix_results', array() );
     if ( isset( $aj_gtmetrix_results['latest'] ) ) {
@@ -74,34 +74,34 @@ $aj_autoptimize_method = ( get_option( 'aj_autoptimize_method', 'async' ) == 'as
             <tr>
                 <td scope="row" align="center"><img src="data:image/jpeg;base64,<?php echo $screenshot; ?>" class="aj_latest_screenshot aj_gtmetrix_screenshot_dashboard">
                 <td scope="row" align="center">
-                    <h3><?php _e('PageSpeed Score','asyncjs'); ?></h3>
+                    <h3><?php _e('PageSpeed Score','async-javascript'); ?></h3>
                     <span class="aj_latest_pagespeed aj_gtmetrix_result"<?php echo $pagespeed_style; ?>><?php echo $pagespeed; ?>%</span>
                 </td>
                 <td scope="row" align="center">
-                    <h3><?php _e('YSlow Score','asyncjs'); ?></h3>
+                    <h3><?php _e('YSlow Score','async-javascript'); ?></h3>
                     <span class="aj_latest_yslow aj_gtmetrix_result"<?php echo $yslow_style; ?>><?php echo $yslow; ?>%</span>
                 </td>
             </tr>
             <tr>
                 <td scope="row" align="center">
-                    <h3><?php _e('Fully Loaded Time','asyncjs'); ?></h3>
+                    <h3><?php _e('Fully Loaded Time','async-javascript'); ?></h3>
                     <span class="aj_latest_flt aj_gtmetrix_result"><?php echo $flt; ?>s</span>
                 </td>
                 <td scope="row" align="center">
-                    <h3><?php _e('Total Page Size','asyncjs'); ?></h3>
+                    <h3><?php _e('Total Page Size','async-javascript'); ?></h3>
                     <span class="aj_latest_tps aj_gtmetrix_result"><?php echo $tps; ?></span>
                 </td>
                 <td scope="row" align="center">
-                    <h3><?php _e('Requests','asyncjs'); ?></h3>
+                    <h3><?php _e('Requests','async-javascript'); ?></h3>
                     <span class="aj_latest_requests aj_gtmetrix_result"><?php echo $requests; ?></span>
                 </td>
             </tr>
-            <tr><td scope="row" align="left" colspan="6"><?php _e('See full report: ','asyncjs'); ?> <span class="aj_latest_report"><?php echo $report_url; ?></span></td></tr>
+            <tr><td scope="row" align="left" colspan="6"><?php _e('See full report: ','async-javascript'); ?> <span class="aj_latest_report"><?php echo $report_url; ?></span></td></tr>
         </table>
         <?php
     }
     ?>
-    <p><?php _e('Please click on the Settings button below to generate a new GTmetrix Report.','asyncjs'); ?></p>
-    <p><button data-id="aj_goto_settings" class="aj_steps_button button"><?php _e('Settings','asyncjs'); ?></button></p>
+    <p><?php _e('Please click on the Settings button below to generate a new GTmetrix Report.','async-javascript'); ?></p>
+    <p><button data-id="aj_goto_settings" class="aj_steps_button button"><?php _e('Settings','async-javascript'); ?></button></p>
 </div>
 <?php

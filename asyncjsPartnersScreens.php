@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 </style>
 <?php
-    echo '<h2>'. __("These related services can improve your site's performance even more!",'asyncjs') . '</h2>';
+    echo '<h2>'. __("These related services can improve your site's performance even more!",'async-javascript') . '</h2>';
 ?>
 <div>
     <?php getasyncJSPartnerFeed(); ?>
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 function getasyncJSPartnerFeed() {
-    $noFeedText=__( 'Have a look at <a href="http://optimizingmatters.com/">optimizingmatters.com</a> for tools that can help you speed up your site even more!', 'asyncjs' );
+    $noFeedText=__( 'Have a look at <a href="http://optimizingmatters.com/">optimizingmatters.com</a> for tools that can help you speed up your site even more!', 'async-javascript');
 
     if (apply_filters('asyncJS_settingsscreen_remotehttp',true)) {
         $rss = fetch_feed( "http://feeds.feedburner.com/OptimizingMattersDownloads" );

@@ -34,76 +34,76 @@ $aj_autoptimize_defer = ($aj_autoptimize_method == 'defer') ? ' checked="checked
 ?>
 
 <div class="asItemDetail">
-    <h3><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?></h3>
+    <h3><?php _e('Enable ', 'async-javascript'); ?><?php echo AJ_TITLE; ?></h3>
     <p>
-        <label><?php _e('Enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>? </label>
+        <label><?php _e('Enable ', 'async-javascript'); ?><?php echo AJ_TITLE; ?>? </label>
         <input type="checkbox" name="aj_enabled" id="aj_enabled" value="1" <?php echo $aj_enabled_checked; ?> />
     </p>
     <p class='aj_enabled_sub <?php if ( ! $aj_enabled_checked ) { echo " hidden"; } ?>'>
-        <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('for logged in users','asyncjs'); ?>? </label>
+        <label><?php _e('Also enable ', 'async-javascript'); ?><?php echo AJ_TITLE; ?> <?php _e('for logged in users','async-javascript'); ?>? </label>
         <input type="checkbox" name="aj_enabled_logged" id="aj_enabled_logged" value="1" <?php echo $aj_enabled_logged_checked; ?> />
     </p>
     <p class='aj_enabled_sub <?php if ( ! $aj_enabled_checked ) { echo " hidden"; } ?>'>
-        <label><?php _e('Also enable ', 'asyncjs'); ?><?php echo AJ_TITLE; ?> <?php _e('on cart/ checkout pages','asyncjs'); ?>? </label>
+        <label><?php _e('Also enable ', 'async-javascript'); ?><?php echo AJ_TITLE; ?> <?php _e('on cart/ checkout pages','async-javascript'); ?>? </label>
         <input type="checkbox" name="aj_enabled_shop" id="aj_enabled_shop" value="1" <?php echo $aj_enabled_shop_checked; ?> />
     </p>
 </div>
 
 <div class="asItemDetail">
-    <h3><?php _e('Quick Settings', 'asyncjs'); ?></h3>
-    <p><?php _e('Use the buttons below to apply common settings.', 'asyncjs'); ?></p>
-    <p><?php _e('<strong>Note: </strong>Using the buttons below will erase any current settings within ', 'asyncjs'); ?><?php echo AJ_TITLE; ?>.</p>
+    <h3><?php _e('Quick Settings', 'async-javascript'); ?></h3>
+    <p><?php _e('Use the buttons below to apply common settings.', 'async-javascript'); ?></p>
+    <p><?php _e('<strong>Note: </strong>Using the buttons below will erase any current settings within ', 'async-javascript'); ?><?php echo AJ_TITLE; ?>.</p>
     <p>
-        <button data-id="aj_step2b_apply" class="aj_steps_button button"><?php _e('Apply Async', 'asyncjs'); ?></button>
-        <button data-id="aj_step2c_apply" class="aj_steps_button button"><?php _e('Apply Defer', 'asyncjs'); ?></button>
-        <button data-id="aj_step2d_apply" class="aj_steps_button button"><?php _e('Apply Async', 'asyncjs'); _e(' (jQuery excluded)', 'asyncjs'); ?></button>
-        <button data-id="aj_step2e_apply" class="aj_steps_button button"><?php _e('Apply Defer', 'asyncjs'); _e(' (jQuery excluded)', 'asyncjs'); ?></button>
+        <button data-id="aj_step2b_apply" class="aj_steps_button button"><?php _e('Apply Async', 'async-javascript'); ?></button>
+        <button data-id="aj_step2c_apply" class="aj_steps_button button"><?php _e('Apply Defer', 'async-javascript'); ?></button>
+        <button data-id="aj_step2d_apply" class="aj_steps_button button"><?php _e('Apply Async', 'async-javascript'); _e(' (jQuery excluded)', 'async-javascript'); ?></button>
+        <button data-id="aj_step2e_apply" class="aj_steps_button button"><?php _e('Apply Defer', 'async-javascript'); _e(' (jQuery excluded)', 'async-javascript'); ?></button>
     </p>
 </div>
 
 <div class="asItemDetail">
     <h3><?php echo AJ_TITLE; ?> Method</h3>
-    <p><?php _e('Please select the method (<strong>async</strong> or <strong>defer</strong>) that you wish to enable:', 'asyncjs'); ?></p>
-    <p><label><?php _e('Method: ', 'asyncjs'); ?></label><input type="radio" name="aj_method" value="async" <?php echo $aj_method_async; ?> /> Async <input type="radio" name="aj_method" value="defer" <?php echo $aj_method_defer; ?> /> Defer</p>
+    <p><?php _e('Please select the method (<strong>async</strong> or <strong>defer</strong>) that you wish to enable:', 'async-javascript'); ?></p>
+    <p><label><?php _e('Method: ', 'async-javascript'); ?></label><input type="radio" name="aj_method" value="async" <?php echo $aj_method_async; ?> /> Async <input type="radio" name="aj_method" value="defer" <?php echo $aj_method_defer; ?> /> Defer</p>
 </div>
     <div class="asItemDetail">
-    <h3><?php _e('jQuery', 'asyncjs'); ?></h3>
-    <p><?php _e('Often if jQuery is loaded with <strong>async</strong> or <strong>defer</strong> it can break some jQuery functions, specifically inline scripts which require jQuery to be loaded before the scripts are run.  <strong><em>Sometimes</em></strong> choosing a different method (<strong>async</strong> or <strong>defer</strong>) will work, otherwise it may be necessary to exclude jQuery from having <strong>async</strong> or <strong>defer</strong> applied.', 'asyncjs'); ?></p>
+    <h3><?php _e('jQuery', 'async-javascript'); ?></h3>
+    <p><?php _e('Often if jQuery is loaded with <strong>async</strong> or <strong>defer</strong> it can break some jQuery functions, specifically inline scripts which require jQuery to be loaded before the scripts are run.  <strong><em>Sometimes</em></strong> choosing a different method (<strong>async</strong> or <strong>defer</strong>) will work, otherwise it may be necessary to exclude jQuery from having <strong>async</strong> or <strong>defer</strong> applied.', 'async-javascript'); ?></p>
     <p>
-        <label><?php _e('jQuery Method: ', 'asyncjs'); ?></label>
-        <input type="radio" id="aj_jquery" name="aj_jquery" value="async" <?php echo $aj_jquery_async; ?> /> Async <input type="radio" name="aj_jquery" value="defer" <?php echo $aj_jquery_defer; ?> /> Defer <input type="radio" name="aj_jquery" value="exclude" <?php echo $aj_jquery_exclude; ?> /> <?php _e('Exclude', 'asyncjs'); ?>
+        <label><?php _e('jQuery Method: ', 'async-javascript'); ?></label>
+        <input type="radio" id="aj_jquery" name="aj_jquery" value="async" <?php echo $aj_jquery_async; ?> /> Async <input type="radio" name="aj_jquery" value="defer" <?php echo $aj_jquery_defer; ?> /> Defer <input type="radio" name="aj_jquery" value="exclude" <?php echo $aj_jquery_exclude; ?> /> <?php _e('Exclude', 'async-javascript'); ?>
     </p>
 </div>
     <div class="asItemDetail">
-    <h3><?php _e('Scripts to Async', 'asyncjs'); ?></h3>
-    <p><?php _e("Please list any scripts which you would like to apply the 'async' attribute to. (comma seperated list eg: jquery.js,jquery-ui.js)", 'asyncjs'); ?></p>
+    <h3><?php _e('Scripts to Async', 'async-javascript'); ?></h3>
+    <p><?php _e("Please list any scripts which you would like to apply the 'async' attribute to. (comma seperated list eg: jquery.js,jquery-ui.js)", 'async-javascript'); ?></p>
     <p>
-        <label><?php _e('Scripts to Async:', 'asyncjs'); ?> </label>
+        <label><?php _e('Scripts to Async:', 'async-javascript'); ?> </label>
         <textarea id="aj_async" style="width:95%;"><?php echo $aj_async; ?></textarea>
     </p>
 </div>
 <div class="asItemDetail">
-    <h3><?php _e('Scripts to Defer', 'asyncjs'); ?></h3>
-    <p><?php _e("Please list any scripts which you would like to apply the 'defer' attribute to. (comma seperated list eg: jquery.js,jquery-ui.js)", 'asyncjs'); ?></p>
+    <h3><?php _e('Scripts to Defer', 'async-javascript'); ?></h3>
+    <p><?php _e("Please list any scripts which you would like to apply the 'defer' attribute to. (comma seperated list eg: jquery.js,jquery-ui.js)", 'async-javascript'); ?></p>
     <p>
-        <label><?php _e('Scripts to Defer:', 'asyncjs'); ?> </label>
+        <label><?php _e('Scripts to Defer:', 'async-javascript'); ?> </label>
         <textarea id="aj_defer" style="width:95%;"><?php echo $aj_defer; ?></textarea>
     </p>
 </div>
 <div class="asItemDetail">
-    <h3><?php _e('Script Exclusion', 'asyncjs'); ?></h3>
-    <p><?php _e('Please list any scripts which you would like excluded from having <strong>async</strong> or <strong>defer</strong> applied during page load. (comma seperated list eg: jquery.js,jquery-ui.js)', 'asyncjs'); ?></p>
+    <h3><?php _e('Script Exclusion', 'async-javascript'); ?></h3>
+    <p><?php _e('Please list any scripts which you would like excluded from having <strong>async</strong> or <strong>defer</strong> applied during page load. (comma seperated list eg: jquery.js,jquery-ui.js)', 'async-javascript'); ?></p>
     <p>
-        <label><?php _e('Scripts to Exclude:', 'asyncjs'); ?> </label>
+        <label><?php _e('Scripts to Exclude:', 'async-javascript'); ?> </label>
         <textarea id="aj_exclusions" style="width:95%;"><?php echo $aj_exclusions; ?></textarea>
     </p>
 </div>
 <div class="asItemDetail">
-    <h3><?php _e('Plugin Exclusions', 'asyncjs'); ?></h3>
-    <p><?php _e('Please select one or more plugins. Scripts contained within the plugin will not have async / defer applied.', 'asyncjs'); ?></p>
-    <p><?php _e('<strong><em>Please Note:</em></strong> This will exclude any JavaScript files which are contained within the files of the selected Plugin(s). External JavaScripts loaded by the selected Plugin(s) are not affected.', 'asyncjs'); ?></p>
-    <p><?php _e('For Example: If a plugin is installed in path <strong>/wp-content/plugins/some-plugin/</strong> then and JavaScripts contained within this path will be excluded. If the plugin loads a JavaScript which is countained elsewhere then the Global Method will be used (ie async or defer)', 'asyncjs'); ?></p>
-    <p><label><?php _e('Exclusions: ', 'asyncjs'); ?></label>
+    <h3><?php _e('Plugin Exclusions', 'async-javascript'); ?></h3>
+    <p><?php _e('Please select one or more plugins. Scripts contained within the plugin will not have async / defer applied.', 'async-javascript'); ?></p>
+    <p><?php _e('<strong><em>Please Note:</em></strong> This will exclude any JavaScript files which are contained within the files of the selected Plugin(s). External JavaScripts loaded by the selected Plugin(s) are not affected.', 'async-javascript'); ?></p>
+    <p><?php _e('For Example: If a plugin is installed in path <strong>/wp-content/plugins/some-plugin/</strong> then and JavaScripts contained within this path will be excluded. If the plugin loads a JavaScript which is countained elsewhere then the Global Method will be used (ie async or defer)', 'async-javascript'); ?></p>
+    <p><label><?php _e('Exclusions: ', 'async-javascript'); ?></label>
 <?php
 $plugins = get_plugins();
 $output = '';
@@ -120,19 +120,19 @@ if (!empty($plugins)) {
     }
     $output .= '</select>';
 } else {
-    $output .= '<p>'.__('No plugins found.', 'asyncjs').'</p>';
+    $output .= '<p>'.__('No plugins found.', 'async-javascript').'</p>';
 }
 echo $output;
 ?>
 </p>
 </div>
 <div class="asItemDetail">
-    <h3><?php _e('Theme Exclusions', 'asyncjs'); ?></h3>
-    <p><?php _e('Please select one or more themes. Scripts contained within the theme will not have async / defer applied.', 'asyncjs'); ?></p>
-    <p><?php _e('<strong><em>Please Note:</em></strong> This will exclude any JavaScript files which are contained within the files of the selected Theme(s). External JavaScripts loaded by the selected Theme(s) are not affected.', 'asyncjs'); ?></p>
-    <p><?php _e('For Example: If a theme is installed in path <strong>/wp-content/themes/some-theme/</strong> then and JavaScripts contained within this path will be excluded. If the theme loads a JavaScript which is countained elsewhere then the Global Method will be used (ie async or defer)', 'asyncjs'); ?></p>
+    <h3><?php _e('Theme Exclusions', 'async-javascript'); ?></h3>
+    <p><?php _e('Please select one or more themes. Scripts contained within the theme will not have async / defer applied.', 'async-javascript'); ?></p>
+    <p><?php _e('<strong><em>Please Note:</em></strong> This will exclude any JavaScript files which are contained within the files of the selected Theme(s). External JavaScripts loaded by the selected Theme(s) are not affected.', 'async-javascript'); ?></p>
+    <p><?php _e('For Example: If a theme is installed in path <strong>/wp-content/themes/some-theme/</strong> then and JavaScripts contained within this path will be excluded. If the theme loads a JavaScript which is countained elsewhere then the Global Method will be used (ie async or defer)', 'async-javascript'); ?></p>
     <p>
-        <label><?php _e('Exclusions:', 'asyncjs'); ?> </label>
+        <label><?php _e('Exclusions:', 'async-javascript'); ?> </label>
         <?php
         $themes = wp_get_themes();
         $output = '';
@@ -145,30 +145,30 @@ echo $output;
             }
             $output .= '</select>';
         } else {
-            $output .= '<p>'. __('No themes found.', 'asyncjs').'</p>';
+            $output .= '<p>'. __('No themes found.', 'async-javascript').'</p>';
         }
         echo $output;
         ?>
     </p>
 </div>
 <div class="asItemDetail">
-    <h3><?php echo AJ_TITLE; ?> <?php _e('For Plugins', 'asyncjs'); ?></h3>
-    <p><?php _e('Although not recommended, some themes / plugins can load JavaScript files without using the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function.  In some cases this is necessary for the functionality of the theme / plugin.', 'asyncjs'); ?></p>
-    <p><?php _e('If these themes / plugins provide a hook that can be used to manipulate how the JavaScript file is loaded then Async Javascript may be able to provide support for these themes / plugins.', 'asyncjs'); ?></p>
-    <p><?php _e('If you have any active themes / plugins that Async Javascript supports then these will be listed below.', 'asyncjs'); ?></p>
-    <p><?php _e('If you think you have found a plugin that Async Javascript may be able to provide support for please lodge a ticket at <a href="https://wordpress.org/support/plugin/async-javascript" target="_blank">https://wordpress.org/support/plugin/async-javascript</a>', 'asyncjs'); ?></p>
+    <h3><?php echo AJ_TITLE; ?> <?php _e('For Plugins', 'async-javascript'); ?></h3>
+    <p><?php _e('Although not recommended, some themes / plugins can load JavaScript files without using the <strong><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts" target="_blank">wp_enqueue_script</a></strong> function.  In some cases this is necessary for the functionality of the theme / plugin.', 'async-javascript'); ?></p>
+    <p><?php _e('If these themes / plugins provide a hook that can be used to manipulate how the JavaScript file is loaded then Async Javascript may be able to provide support for these themes / plugins.', 'async-javascript'); ?></p>
+    <p><?php _e('If you have any active themes / plugins that Async Javascript supports then these will be listed below.', 'async-javascript'); ?></p>
+    <p><?php _e('If you think you have found a plugin that Async Javascript may be able to provide support for please lodge a ticket at <a href="https://wordpress.org/support/plugin/async-javascript" target="_blank">https://wordpress.org/support/plugin/async-javascript</a>', 'async-javascript'); ?></p>
         <?php
         if (is_plugin_active('autoptimize/autoptimize.php') || is_plugin_active('autoptimize-beta/autoptimize.php')) {
                 ?>
                 <div class="aj_plugin">
-                        <h4><?php _e('Plugin: Autoptimize', 'asyncjs'); ?></h4>
+                        <h4><?php _e('Plugin: Autoptimize', 'async-javascript'); ?></h4>
                         <p><a href="https://wordpress.org/plugins/autoptimize/" target="_blank">https://wordpress.org/plugins/autoptimize/</a></p>
                         <p>
-                            <label><?php _e('Enable Autoptimize Support:', 'asyncjs'); ?> </label>
+                            <label><?php _e('Enable Autoptimize Support:', 'async-javascript'); ?> </label>
                             <input type="checkbox" id="aj_autoptimize_enabled" value="1" <?php echo $aj_autoptimize_enabled_checked; ?> />
                         </p>
                         <p>
-                            <label><?php _e('jQuery Method:', 'asyncjs'); ?> </label>
+                            <label><?php _e('jQuery Method:', 'async-javascript'); ?> </label>
                             <input type="radio" name="aj_autoptimize_method" value="async" <?php echo $aj_autoptimize_async; ?> /> Async <input type="radio" name="aj_autoptimize_method" value="defer" <?php echo $aj_autoptimize_defer; ?> /> Defer
                         </p>
                 </div>
@@ -177,5 +177,5 @@ echo $output;
         ?>
 </div>
 <p>
-    <button data-id="aj_save_settings" class="aj_steps_button button"><?php _e('Save Settings', 'asyncjs'); ?></button>
+    <button data-id="aj_save_settings" class="aj_steps_button button"><?php _e('Save Settings', 'async-javascript'); ?></button>
 </p>
