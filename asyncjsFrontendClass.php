@@ -41,6 +41,9 @@ class AsyncJavaScriptFrontend {
     	if ( isset( $_GET['aj_simulate'] ) ) {
             $aj_enabled = true;
             $aj_method = sanitize_text_field( $_GET['aj_simulate'] );
+            if ( $aj_method !== 'async' && $aj_method !== 'defer' ) {
+                $aj_method = 'async';
+            }
             if ( isset( $_GET['aj_simulate_jquery'] ) ) {
                     $aj_jquery = sanitize_text_field( $_GET['aj_simulate_jquery'] );
             } else {

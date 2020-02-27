@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $aj_gtmetrix_results = get_option( 'aj_gtmetrix_results', array() );
-if ( !isset( $_POST['sub_action'] ) ) {
+if ( ! isset( $_POST['sub_action'] ) || ! current_user_can( 'manage_options' ) ) {
     $return = array(
         'status' => false,
         'error' => 'No sub action defined.'
