@@ -1,13 +1,17 @@
 /* globals aj_localize_admin,jQuery */
 /* eslint no-console: 1 */
 // updated:
-// 2018-12-10 15:42:09
+// 2020-02-01 12:04:00
 function notifySettingsSaved() {
   jQuery("#aj_notification").
     fadeIn("slow").
     html('Settings Saved <span class="aj_dismiss"><a title="dismiss this notification">x</a></span>').
     delay(500).
     fadeOut("slow");
+}
+
+function log_error(err) {
+  jQuery('div.aj_loader').replaceWith("<h2 style='color:red'>Error: " + err.error + "</h2>");
 }
 
 function aj_step(theStep) {
@@ -69,10 +73,10 @@ function aj_step(theStep) {
           jQuery(".aj_gtmetrix_credits").html(response.credits);
           jQuery("#aj_step_results").show();
         } else {
-          console.log(response);
+          log_error(response);
         }
       } catch (err) {
-        console.log(err);
+        log_error(err);
       }
     });
   } else {
@@ -188,10 +192,10 @@ function aj_step(theStep) {
             );
           }
         } else {
-          console.log(response);
+          log_error(response);
         }
       } catch (err) {
-        console.log(err);
+        log_error(err);
       }
     });
   }
