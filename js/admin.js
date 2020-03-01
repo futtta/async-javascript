@@ -11,7 +11,12 @@ function notifySettingsSaved() {
 }
 
 function log_error(err) {
-  jQuery('div.aj_loader').replaceWith("<h2 style='color:red'>Error: " + err.error + "</h2>");
+  if ( err.error ) {
+    aj_error = err.error;
+  } else {
+    aj_error = JSON.stringify(err);
+  }
+  jQuery('div.aj_loader').replaceWith("<h2 style='color:red'>Error: " + aj_error + "</h2>");
 }
 
 function aj_step(theStep) {
