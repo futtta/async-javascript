@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $aj_gtmetrix_results = get_option( 'aj_gtmetrix_results', array() );
-if ( ! isset( $_POST['sub_action'] ) || ! current_user_can( 'manage_options' ) ) {
+if ( ! isset( $_POST['sub_action'] ) || ! current_user_can( 'manage_options' ) || ! check_ajax_referer( 'aj_nonce', 'security', false ) ) {
     $return = array(
         'status' => false,
-        'error' => 'No sub action defined.'
+        'error' => 'No sub action defined or security issue.'
     );
 } else {
     $sub_action = sanitize_text_field( $_POST['sub_action'] );
