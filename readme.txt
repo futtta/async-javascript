@@ -3,8 +3,8 @@ Contributors: (cloughit), optimizingmatters, futtta, wormeyman
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
-Tested up to: 5.2
-Stable tag: 2.20.02.27
+Tested up to: 5.4
+Stable tag: 2.20.03.01
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,12 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 * Delete the plugin
 
 == Changelog ==
+
+= 2.20.03.01 =
+
+* extra security measure; check the nonce when saving settings/ going through wizard.
+* wizard: if something fails then communicate this onscreen instead of on the console.
+* autoptimize integration: change copy to explain this might or might not be helpful.
 
 = 2.20.02.27 =
 
