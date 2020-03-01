@@ -162,14 +162,14 @@ echo $output;
                 ?>
                 <div class="aj_plugin">
                         <h4><?php _e('Plugin: Autoptimize', 'async-javascript'); ?></h4>
-                        <p><a href="https://wordpress.org/plugins/autoptimize/" target="_blank">https://wordpress.org/plugins/autoptimize/</a></p>
                         <p>
-                            <label><?php _e('Enable Autoptimize Support:', 'async-javascript'); ?> </label>
+                            <label><?php _e('Enable Autoptimize Support to allow you to override AO\'s default "defer" flag (see below):', 'async-javascript'); ?> </label>
                             <input type="checkbox" id="aj_autoptimize_enabled" value="1" <?php echo $aj_autoptimize_enabled_checked; ?> />
                         </p>
                         <p>
-                            <label><?php _e('jQuery Method:', 'async-javascript'); ?> </label>
+                            <label><?php _e('Autoptimize Javascript Method:', 'async-javascript'); ?> </label>
                             <input type="radio" name="aj_autoptimize_method" value="async" <?php echo $aj_autoptimize_async; ?> /> Async <input type="radio" name="aj_autoptimize_method" value="defer" <?php echo $aj_autoptimize_defer; ?> /> Defer
+                            <div><?php _e('If Async Javascripts is set to "async" you can try changing Autoptimize\'s Javascript Method to "async" as well. This might help improving performance, but on the other hand might break things, so test to see if this is useful.', 'async-javascript'); ?></div>
                         </p>
                 </div>
                 <?php
