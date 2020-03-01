@@ -152,6 +152,9 @@ class AsyncJavaScriptBackend {
             // upgrade from 2.18.06.13, enable aj for logged users & checkout/ cart to ensure non-regression
             update_option( 'aj_enabled_logged', 1 );
             update_option( 'aj_enabled_shop', 1 );
+        } else if ( $aj_version < '2.20.03.01' ) {
+            // reset gtmetrix API key which *could* have been used to inject malicious JavaScript.
+            update_option( 'aj_gtmetrix_api_key', '');
         }
 
         if ( $aj_version != AJ_VERSION ) {
