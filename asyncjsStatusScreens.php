@@ -21,7 +21,7 @@ $aj_enabled = (get_option('aj_enabled', 0) == 1) ? 'Enabled' : 'Disabled';
 $aj_method = (get_option('aj_method', 'async') == 'async') ? 'Async' : 'Defer';
 $aj_jquery = get_option('aj_jquery', 'async');
 $aj_jquery = ($aj_jquery == 'same ') ? get_option('aj_method', 'async') : $aj_jquery;
-$aj_jquery = ($aj_jquery == 'async') ? 'Async' : ($aj_jquery == 'defer') ? 'Defer' : 'Excluded';
+$aj_jquery = ( $aj_jquery == 'async' ) ? 'Async' : ( ( $aj_jquery == 'defer' ) ? 'Defer' : 'Excluded' );
 $aj_async = get_option('aj_async', '');
 $aj_defer = get_option('aj_defer', '');
 $aj_exclusions = get_option('aj_exclusions', '');
