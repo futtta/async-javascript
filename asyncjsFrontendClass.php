@@ -68,6 +68,11 @@ class AsyncJavaScriptFrontend {
             $aj_plugin_exclusions = get_option( 'aj_plugin_exclusions', array() );
             $aj_theme_exclusions = get_option( 'aj_theme_exclusions', array() );
         }
+        
+        // hard exclude "document.write", which e.g. WordPress core uses to add polyfills,
+        // but we _really_ should hide all inline JS from AsyncJS in a future release.
+        $array_exclusions[] = 'document.write';
+        
         if ( false !== $aj_enabled && false !== $this->aj_shop() && false !== $this->aj_logged() && false === is_admin() && false === $this->aj_is_amp() && false === $this->aj_noptimize() ) {
             if ( is_array( $aj_plugin_exclusions ) && !empty( $aj_plugin_exclusions ) ) {
                 foreach ( $aj_plugin_exclusions as $aj_plugin_exclusion ) {
@@ -93,7 +98,7 @@ class AsyncJavaScriptFrontend {
                 foreach ( $array_exclusions as $exclusion ) {
                 	$exclusion = trim( $exclusion );
                 	if ( !empty( $exclusion ) ) {
-	                    if ( false !== strpos( strtolower( $src ), strtolower( $exclusion ) ) ) {
+	                    if ( false !== strpos( strtolower( $tag ), strtolower( $exclusion ) ) ) {
 	                        return $tag;
 	                    }
 					}
