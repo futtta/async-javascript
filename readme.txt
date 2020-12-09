@@ -3,8 +3,8 @@ Contributors: (cloughit), optimizingmatters, futtta, wormeyman
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
-Tested up to: 5.4
-Stable tag: 2.20.03.01
+Tested up to: 5.6
+Stable tag: 2.20.12.09
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,12 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 * Delete the plugin
 
 == Changelog ==
+
+= 2.20.12.09 =
+
+* fix for some ternary operators warning in PHP 7.4 and up.
+* hard-exclude document.write (WordPress core injects inline JS that has `<script src` in it which AsyncJS acted on)
+* fix for WordPress 5.6 renaming jQuery from jquery.js into jquery.min.js
 
 = 2.20.03.01 =
 
