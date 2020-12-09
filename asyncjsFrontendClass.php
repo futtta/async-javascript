@@ -104,7 +104,7 @@ class AsyncJavaScriptFrontend {
 					}
                 }
             }
-            if ( false !== strpos( strtolower( $src ), 'js/jquery/jquery.js' ) ) {
+            if ( false !== strpos( strtolower( $src ), 'js/jquery/jquery.js' ) || false !== strpos( strtolower( $src ), 'js/jquery/jquery.min.js' ) ) {
                 if ( $aj_jquery == 'async' || $aj_jquery == 'defer' ) {
                         $tag = str_replace( 'src=', $aj_jquery . "='" . $aj_jquery . "' src=", $tag );
                 return $tag;
