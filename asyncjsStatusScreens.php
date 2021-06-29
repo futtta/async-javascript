@@ -13,7 +13,11 @@ if ($aj_gtmetrix_username != '' && $aj_gtmetrix_api_key != '') {
     $test->api_password($aj_gtmetrix_api_key);
     $test->user_agent(AJ_UA);
     $status = $test->status();
-    $credits = $status['api_credits'];
+    if ( is_array( $status ) ) {
+        $credits = $status['api_credits'];
+    } else {
+        $credits = 'unknown';
+    }
 } else {
     $credits = 'N/A';
 }
@@ -165,7 +169,7 @@ if (isset($aj_gtmetrix_results['latest'])) {
     <li><?php _e("If you do not already have an account with GTmetrix, go ahead and sign up (it's FREE!).", 'async-javascript'); ?></li>
     <li><?php _e('Log in to your GTmetrix account.', 'async-javascript'); ?></li>
     <li><?php _e("If you haven't yet generated your API Key, click on <strong>Generate API Key</strong>", 'async-javascript'); ?></li>
-    <li><?php _e('Copy your Username and API Key into the fields below:', 'async-javascript'); ?><br /><input type="text" id="aj_gtmetrix_username" value="<?php echo $aj_gtmetrix_username; ?>" placeholder="GTmetrix Username"><input type="text" id="aj_gtmetrix_api_key" value="<?php echo $aj_gtmetrix_api_key; ?>" placeholder="GTmetrix API Key"></li>
+    <li><?php _e('Copy your Username and API Key into the fields below:', 'async-javascript'); ?><br /><input type="text" id="aj_gtmetrix_username" value="<?php echo esc_attr( $aj_gtmetrix_username ); ?>" placeholder="GTmetrix Username"><input type="text" id="aj_gtmetrix_api_key" value="<?php echo esc_attr( $aj_gtmetrix_api_key ); ?>" placeholder="GTmetrix API Key"></li>
     <li><?php _e('Select the desired server.', 'async-javascript'); ?><br />
         <select id="aj_gtmetrix_server">
             <?php
