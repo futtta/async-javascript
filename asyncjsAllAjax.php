@@ -381,18 +381,18 @@ if ( ! isset( $_POST['sub_action'] ) || ! current_user_can( 'manage_options' ) |
             }
             break;
         case 'aj_save_settings':
-            $aj_enabled = sanitize_text_field( $_POST['aj_enabled'] );
-            $aj_enabled_logged = sanitize_text_field( $_POST['aj_enabled_logged'] );
-            $aj_enabled_shop = sanitize_text_field( $_POST['aj_enabled_shop'] );
-            $aj_method = sanitize_text_field( $_POST['aj_method'] );
-            $aj_jquery = sanitize_text_field( $_POST['aj_jquery'] );
-            $aj_async = sanitize_text_field( $_POST['aj_async'] );
-            $aj_defer = sanitize_text_field( $_POST['aj_defer'] );
-            $aj_exclusions = sanitize_text_field( $_POST['aj_exclusions'] );
-            $aj_plugin_exclusions = $_POST['aj_plugin_exclusions'];
-            $aj_theme_exclusions = $_POST['aj_theme_exclusions'];
-            $aj_autoptimize_enabled = sanitize_text_field( $_POST['aj_autoptimize_enabled'] );
-            $aj_autoptimize_method = sanitize_text_field( $_POST['aj_autoptimize_method'] );
+            $aj_enabled = ( empty($_POST['aj_enabled'] ) ) ? '' : sanitize_text_field( $_POST['aj_enabled'] );
+            $aj_enabled_logged = ( empty($_POST['aj_enabled_logged'] ) ) ? '' : sanitize_text_field( $_POST['aj_enabled_logged'] );
+            $aj_enabled_shop = ( empty($_POST['aj_enabled_shop'] ) ) ? '' : sanitize_text_field( $_POST['aj_enabled_shop'] );
+            $aj_method = ( empty($_POST['aj_method'] ) ) ? '' : sanitize_text_field( $_POST['aj_method'] );
+            $aj_jquery =( empty($_POST['aj_jquery'] ) ) ? '' :  sanitize_text_field( $_POST['aj_jquery'] );
+            $aj_async = ( empty($_POST['aj_async'] ) ) ? '' : sanitize_text_field( $_POST['aj_async'] );
+            $aj_defer = ( empty($_POST['aj_defer'] ) ) ? '' : sanitize_text_field( $_POST['aj_defer'] );
+            $aj_exclusions = ( empty($_POST['aj_exclusions'] ) ) ? '' : sanitize_text_field( $_POST['aj_exclusions'] );
+            $aj_plugin_exclusions = ( empty($_POST['aj_plugin_exclusions'] ) ) ? '' : array_map( 'sanitize_text_field', $_POST['aj_plugin_exclusions'] );
+            $aj_theme_exclusions = ( empty($_POST['aj_theme_exclusions'] ) ) ? '' : array_map( 'sanitize_text_field', $_POST['aj_theme_exclusions'] ) ;
+            $aj_autoptimize_enabled = ( empty($_POST['aj_autoptimize_enabled'] ) ) ? '' : sanitize_text_field( $_POST['aj_autoptimize_enabled'] );
+            $aj_autoptimize_method = ( empty($_POST['aj_autoptimize_method'] ) ) ? '' : sanitize_text_field( $_POST['aj_autoptimize_method'] );
             update_option( 'aj_enabled', $aj_enabled );
             update_option( 'aj_enabled_logged', $aj_enabled_logged );
             update_option( 'aj_enabled_shop', $aj_enabled_shop );
