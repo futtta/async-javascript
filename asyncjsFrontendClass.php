@@ -69,9 +69,12 @@ class AsyncJavaScriptFrontend {
             $aj_theme_exclusions = get_option( 'aj_theme_exclusions', array() );
         }
         
-        // hard exclude "document.write", which e.g. WordPress core uses to add polyfills,
+        // hard exclude some typical inline JS functions that might break by being asynced but should not
         // but we _really_ should hide all inline JS from AsyncJS in a future release.
         $array_exclusions[] = 'document.write';
+        $array_exclusions[] = 'createElement';
+        $array_exclusions[] = 'getElementsByTagName';
+        $array_exclusions[] = 'appendChild';
         
         if ( false !== $aj_enabled && false !== $this->aj_shop() && false !== $this->aj_logged() && false === is_admin() && false === $this->aj_is_amp() && false === $this->aj_noptimize() ) {
             if ( is_array( $aj_plugin_exclusions ) && !empty( $aj_plugin_exclusions ) ) {

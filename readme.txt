@@ -4,7 +4,7 @@ Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Tags: async, javascript, pagespeed, performance, render blocking
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 2.21.06.29
+Stable tag: 2.21.08.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,10 @@ We recommend using the awesome <a href="https://wordpress.org/plugins/autoptimiz
 * Delete the plugin
 
 == Changelog ==
+
+= 2.21.08.31 =
+
+* workaround for issues with some inline JS getting asynced (hat tip to WP Bullet's Mike)
 
 = 2.21.06.29 =
 
