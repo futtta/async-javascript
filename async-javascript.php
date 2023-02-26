@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if (is_admin() || is_login()) {
     require_once('asyncjsBackendClass.php');
     $ajBackend = new AsyncJavaScriptBackend();
-} else {
+} elseif ( ! function_exists( 'is_login' ) || ! is_login() ) {
     require_once('asyncjsFrontendClass.php');
     $ajFrontend = new AsyncJavaScriptFrontend();
 }
