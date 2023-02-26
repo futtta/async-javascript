@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-if (is_admin() || is_login()) {
+if ( is_admin() ) {
     require_once('asyncjsBackendClass.php');
     $ajBackend = new AsyncJavaScriptBackend();
 } elseif ( ! function_exists( 'is_login' ) || ! is_login() ) {
